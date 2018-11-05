@@ -1,0 +1,4 @@
+pdflatex -interaction nonstopmode -file-line-error Com_meet.tex
+bibtex Com_meet.aux
+pdflatex -interaction nonstopmode -file-line-error Com_meet.tex
+pdflatex -interaction nonstopmode -file-line-error Com_meet.tex
