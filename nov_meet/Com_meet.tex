@@ -78,7 +78,7 @@
 
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
-
+\usepackage[font=small,skip=0pt]{caption}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -121,21 +121,25 @@ University of Tennessee \\ % Your institution for the title page
 
 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
-		\column{.45\textwidth} % Left column and width
-		\begin{block}
-			In 1983, the European Muon Collaboration (EMC) published their experimental results for the Nuclear structure functions of Iron and Deuterium. This data was used to determine:
+		\column{.55\textwidth} % Left column and width
+		\vspace{-10pt}
+		\begin{block}{}
+			European Muon Collaboration's (EMC) 1983  results for the Nuclear structure functions of Iron and Deuterium. 
 			\begin{itemize}
 				\item Nucleon Structure Functions
 				\item Sea-Quark Distributions 
 				\item Gluon Distributions 
+				\item Expected $ F_A = NF_2^N + ZF_2^P $
+				\item Because the binding energies of the nucleons are several orders of magnitude smaller then the momentum transfer for an interaction
+				\item Fermi interaction causing differentiation at high momentum transfer.
 			\end{itemize}
 		\end{block}
 
-		\column{.5\textwidth} % Right column and width
+		\column{.45\textwidth} % Right column and width
 	
 		\begin{figure}
 			\caption{\label{EMC} EMC data of $ F_2^{Fe}/F_2^{D}$  from 1982 \cite{cc}.}
-	 		\includegraphics[width =6cm]{../images/EMC_cc.jpg}
+	 		\includegraphics[width =5.5cm]{../images/EMC_cc.jpg}
 	 	\end{figure}
  	\end{columns}
 \end{frame}
@@ -143,26 +147,83 @@ University of Tennessee \\ % Your institution for the title page
 %------------------------------------------------
 \begin{frame}
 \frametitle{EMC Effect}
-	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-		\column{.45\textwidth} % Left column and width
-		\begin{block}{}
+	\begin{block}{}
 		European Muon Collaboration:
 			\begin{itemize}
-				\item Expected $ F_A = NF_2^N + ZF_2^P $
-				\item Because the binding energies of the nucleons are several orders of magnitude smaller then the momentum transfer for an interaction
-				\item Fermi interaction causing differentiation at high moment transfer. 
+				\item  Nuclear F2 structure function per nucleon different			than that of deuterium
+				\item Quark distribution functions modified in the nuclear
+				medium
+				\item Current Explanations
+				\begin{itemize}
+					\item Binding effects beyond nucleon Fermi motion
+					\item Enhancement of pion field with increasing A
+					\item Influence of possible multi-quark clusters
+					\item Change in the quark confinement scale in nuclei
+				\end{itemize}
+				\item No unique/universally accepted theory for explanation
+				of effect up to date. 
 			\end{itemize}
 		\end{block}
 
-		\column{.5\textwidth} % Right column and width
 	
-		\begin{figure}
-			\caption{EMC data of $ F_2^{Fe}/F_2^{D}$  from 1982 \cite{cc}.}
-			\includegraphics[width =6cm]{../images/EMC_cc}
-		\end{figure}
+\end{frame}
+
+%----------------------------------------------
+\begin{frame}
+\frametitle{The EMC since}
+
+	\begin{figure}
+		\caption{\label{EMC_slac} SLAC experiment E139 \cite{slac_emc}.}
+		\includegraphics[width =12cm]{../images/EMC_slac_horiz.png}
+	\end{figure}
 	
-	\end{columns}
+
+\end{frame}
+
+%----------------------------------------------
+\begin{frame}
+\frametitle{The EMC since}
+\begin{columns}[]
+\column{.5\textwidth} % Left column and width
+	\vspace{-20pt}
+\begin{figure}
+	\caption{\label{E03103} JLab experiment "EMC in light Nuclei" \cite{E3103}.}
+	\vspace{-20pt}
+	\includegraphics[width =5cm]{../images/carbon_be_he4}
+\end{figure}
+
+\column{.55\textwidth} % Left column and width
+	\hspace{10pt}
+\begin{figure}
+
+	\caption{\label{E03103_1} EMC as a function of Nuclear Density \cite{E3103}.}
+
+	\includegraphics[width =6cm]{../images/PRL_slopes}
+\end{figure}
+\end{columns}
+\end{frame}
+
+%----------------------------------------------
+\begin{frame}
+\frametitle{Deep Inelastic Scattering}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+	
+	\column{.45\textwidth} % Left column and width
+	\begin{figure}
+		\includegraphics[width =5cm]{../images/DIS}
+	\end{figure}
+		
+	
+	\column{.5\textwidth} % Right column and width
+	\begin{itemize}
+		\item Momentum Transfer $ Q^2 \equiv 4EE' sin \frac{\theta}{2} $
+		\item Bjorken X $(X_{bj}/x) = \frac{Q^2}{2\nu M}$
+		\item $\sigma_{eN} = \frac{\alpha^2}{eE^2sin^4(\frac{\theta}{2})} [\frac{F_2}{\nu}cos^2\frac{\theta}{2} + \frac{2F_2}{M}sin^2\frac{\theta}{2}] $
+	\end{itemize}
+	
+
+	
+\end{columns}
 \end{frame}
 
 %----------------------------------------------
@@ -297,6 +358,14 @@ This statement requires citation \cite{cc}.
 \bibitem[Higinbotham D., 2013]{cc} Douglas Higinbotham (2013) 
 \newblock The EMC effect still puzzles after 30 years
 \newblock \emph{Cern Courier} April 2013.
+
+\bibitem[J. Gomez et al., 1994]{slac_emc} J. Gomez et al. (SLAC-E139)  
+\newblock \emph{Phys. Rev D}  49 (1994) 4348 
+
+\bibitem[J.Seely, A. Daniel et al]{E3103} J.Seely, A. Daniel et al (2013) 
+\newblock New Measurements of the EMC Effect in Very Light Nuclei
+\newblock \emph{nucl-ex/0904.4448}.
+
 \end{thebibliography}
 }
 \end{frame}
