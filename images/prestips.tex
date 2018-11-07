@@ -1,0 +1,428 @@
+%\documentclass[11pt]{beamer}
+\documentclass[dvips,11pt]{beamer}
+%\documentclass[handout,dvips,11pt,gray]{beamer}
+
+% Setup appearance:
+
+%\usetheme{Darmstadt}
+%\usetheme{Frankfurt}
+%\usetheme{Warsaw}
+\usetheme[secheader]{Boadilla}
+%\setbeameroption{hide notes}
+%\setbeameroption{show notes}
+%\setbeameroption{show only notes}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{note page}[plain]
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{pst-all}              % PStricks
+\usepackage{graphicx}             % Graphics formats
+%\usepackage{multimedia}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+%\logo{\includegraphics[width=0.05\textwidth]{utlogo.jpg}}
+\logo{\includegraphics[width=0.05\textwidth]{utlogo.eps}}
+
+% Author, Title, etc.
+
+\title[\LaTeX\ Tips and Tricks] 
+{%
+  Presentations with \LaTeX: Tips and Tricks%
+}
+
+\author[Saum]
+{
+  Michael A. Saum 
+}
+
+\institute[Dept of Mathematics, UTK]
+{
+  Department of Mathematics \\
+  The University of Tennessee, Knoxville
+}
+
+\date[10/10/07]
+{October 10, 2007}
+
+\begin{document}
+%\bibliographystyle{apalike}
+%\bibliographystyle{unsrt}
+
+\begin{frame}
+  \titlepage
+\note<1>{Always have a title page!}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents[hideallsubsections]
+\note<1>{Table of contents really only necessary when talk is 45 min or more.}
+\end{frame}
+
+
+\section{Introduction}
+
+\subsection{Presentations: Good and Bad}
+
+\begin{frame}{Bad Presentations}
+What makes a \alert{Bad} Presentation?
+\begin{itemize}
+\item Not targeted to audience.
+\item Not well thought out. 
+\item Time issues.
+\item Too much on each slide.
+\item Too many slides.
+\end{itemize}
+\note<1>{Itemize environments work well.}
+\end{frame}
+
+\begin{frame}{Good Presentations}
+What makes a \alert{Good} Presentation?
+\begin{enumerate}
+\item Targeted to audience, keeps audience engaged.
+\item Well thought out.
+\item Conveys information.
+\item Right on Time.
+\end{enumerate}
+\note<1>{Enumerate environments also work well.}
+\end{frame}
+
+\section{Slides with \LaTeX}
+
+\subsection*{}
+
+\begin{frame}{Why \LaTeX ?}
+\begin{itemize}
+\item Mathematicians use \LaTeX\ for papers.
+\item \LaTeX\ typesets mathematics much better than Powerpoint or Word.
+\item The \LaTeX\ system is \alert{free}!
+\item Worry about the content, not font size, placement, etc. 
+\item The \LaTeX\ system is \alert{FREE}!!
+\item The end result is an Adobe PDF file, which is extremely portable and can be
+displayed on almost any platform.
+\end{itemize}
+\note<1>{\LaTeX\ is not really a system, but a set of macros built on top of the \TeX\ language.}
+\end{frame}
+
+\begin{frame}{Choices to Make}
+\begin{itemize}[<+->]
+\item Linux or Windows?
+\item User Interface - Text editor?
+\item Output Choices - Presentation or Handout?
+\end{itemize}
+\note<1>[item]{Note incremental display of lines.}
+\note<1>[item]{On linux systems, everything \LaTeX\ related is
+usually contained in {\tt /usr/share/texmf/} subdirectory (including documentation) and is called the
+{\tt tetex} distribution.  On Windows systems, one should install the MikTeX system and ensure it is
+the latest version.  Note that the MikTeX system is basically the same {\em source code} as that contained
+in the the tetex distribution.  This allows for ease of transport of the {\tt .tex} files between systems
+and platforms.}
+\note<1>[item]{ Choices include {\tt vi}, {\tt emacs}, and {\tt winedt} (windows only).  Note that if working on 
+Windows, the winedt ''official'' version costs \$.  However, the trial version works just as well.  Note
+also that the winedt/MikTeX system has a nice user interface controlling creation of {\tt .dvi, .ps, and .pdf}
+files at the click of a button.  Power users do not use GUI interfaces and therefore use linux.}
+\note<1>[item]{ If one desires a handout, one usually will desire multiple slides on a page, or include notes about each
+slide.  Usually, one will want handouts to be printed in black and white.  Presentations will usually have
+color associated with them.  Switching between these modes can easily be done, as will be shown later.}
+\end{frame}
+
+\begin{frame}{\LaTeX\ Presentation Support - History}
+\begin{itemize}
+\item foiltex
+\item seminar
+\item prosper
+\item beamer
+\end{itemize}
+\note<1>[item]{{\tt foiltex} was used in the early days of \LaTeX.}
+\note<1>[item]{{\tt seminar} is nice and simple, but not much in the way of color enhancement.}
+\note<1>[item]{{\tt prosper} was a major step forward in that it grouped together different elements
+to present a cohesive ''template'' based on particular ''themes''.  However, it was difficult
+to fine tune and to get exactly right.}
+\note<1>[item]{{\tt beamer} comes close to providing a complete set of interchangeable elements (themes)
+which allow one to focus more on the content rather than the appearance.}
+\end{frame}
+
+\section{Using the {\tt beamer} Package}
+
+\begin{frame}[fragile=singleslide]{Framed!}
+One should generally use one frame per slide.
+\begin{block}{A frame}
+\small
+\begin{verbatim}
+\begin{frame}{frame title}
+...  blah ...
+\end{frame}
+\end{verbatim}
+\end{block}
+\note<1>[item]{Note the use of a boxed environment.}
+\note<1>[item]{Note the use of ''fragile'' in the frame declaration.  This allows use of verbatim
+environment.}
+\note<1>[item]{Note the change in text size via ''small'' command.  To get really small, use ''tiny'' command.}
+\end{frame}
+
+\begin{frame}{More Choices}
+\begin{itemize}
+\item Presentation Themes
+\begin{itemize}
+\item With/Without Navigation bars?
+\item Tree-like Navigation bar?
+\item Table of Contents sidebar? 
+\item Mini-Frame Navigation? 
+\end{itemize}
+\item Outer Themes
+\item Inner Themes
+\item Color Themes
+\item Font Themes
+\end{itemize}
+\note<1>[item]{Note the nesting of the itemize environments.}
+\note<1>[item]{Navigation bars sometimes take away from the presentation.  Use with caution!}
+\note<1>[item]{Outer Themes govern how frame title, navigation, etc. appear.}
+\note<1>[item]{Inner Themes govern how list environments appear, etc.}
+\note<1>[item]{Sometimes choosing different Font and Color Themes don't work well together.}
+\end{frame}
+
+\begin{frame}[fragile=singleslide]{Templates, I}
+\begin{block}{Setup}
+\tiny
+\begin{verbatim}
+%\documentclass[11pt]{beamer}
+\documentclass[dvips,11pt]{beamer}
+%\documentclass[handout,dvips,11pt,gray]{beamer}
+
+% Setup appearance:
+
+%\usetheme{Darmstadt}
+%\usetheme{Frankfurt}
+%\usetheme{Warsaw}
+\usetheme[secheader]{Boadilla}
+%\setbeameroption{hide notes}
+%\setbeameroption{show notes}
+%\setbeameroption{show only notes}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{note page}[plain]
+\end{verbatim}
+\end{block}
+\note<1>{Change options depending on needs.}
+\end{frame}
+
+\begin{frame}[fragile=singleslide]{Templates, II}
+\begin{block}{Packages}
+\tiny
+\begin{verbatim}
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{pst-all}              % PStricks
+\usepackage{graphicx}             % Graphics formats
+%\usepackage{multimedia}
+
+%\usepackage{pgfpages}
+%\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+%\logo{\includegraphics[width=0.05\textwidth]{utlogo.jpg}}
+\logo{\includegraphics[width=0.05\textwidth]{utlogo.eps}}
+
+% Author, Title, etc.
+
+\title[\LaTeX\ Tips and Tricks]{Presentations with \LaTeX: Tips and Tricks}
+
+\author[Saum]{ Michael A. Saum}
+\institute[Dept of Mathematics, UTK]
+{Department of Mathematics \\ The University of Tennessee, Knoxville}
+
+\date[10/10/07]{October 10, 2007}
+
+\begin{document}
+... frames ...
+\end{document}
+\end{verbatim}
+\end{block}
+\note<1>[item]{This is what I have found works well.  Your mileage may vary.}
+\note<1>[item]{A nice set of basic templates is contained in {\tt /usr/share/texmf/tex/latex/beamer/solutions/}
+subdirectory.}
+\end{frame}
+
+\begin{frame}[fragile=singleslide]{Handouts}
+To print out a presentation (with notes) for handouts, I use the following:
+\tiny
+\begin{verbatim}
+\documentclass[handout,dvips,11pt,gray]{beamer}
+\usetheme[secheader]{Boadilla}
+\setbeameroption{show notes}
+
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{note page}[plain]
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{pst-all}              % PStricks
+
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+\end{verbatim}
+\note<1>{Note that if you are not using PStricks, one can use pdfLaTeX and remove dvips option in documentclass.}
+\end{frame}
+
+\begin{frame}{Getting output}
+\small
+\begin{block}<1->{Windows}
+If on windows using the {\tt winedt} text editor, one should press the ''texify'' (or pdf texify) button, depending
+on whether one is using postscript or not.
+\end{block}
+\begin{block}<2->{Linux, postscript}
+{\tt latex filename} (twice) \\
+{\tt dvips filename -o} \\
+{\tt ps2pdf13 filename}
+\end{block}
+\begin{block}<3->{Linux, pdf}
+{\tt pdflatex filename} (twice)
+\end{block}
+\note<1>{Note the use of incremental display of different blocks.}
+\end{frame}
+
+\section{Graphics}
+
+\subsection*{}
+
+\begin{frame}{Type of Graphics}
+\begin{itemize}
+\item Inserting graphics into a presentation is a \alert{good} idea, i.e., sometimes a picture
+is really worth a thousand words.
+\item \LaTeX\ has available a number of packages which allow for simple drawings to be done
+within the \LaTeX\ document itself.  
+\item  \LaTeX\ also has available packages which allow for importing of external document files, such
+as {\tt .ps, .eps, .jpg, .gif}, etc.
+\item {\tt beamer} allows for inclusion of ''movies'' in a presentation also.
+\end{itemize}
+\note<1>{An animated {\tt .gif} file is also a movie!}
+\end{frame}
+
+\begin{frame}{Guidelines}
+\begin{itemize}
+\item If one is including only external {\tt .ps} or {\tt .eps} files, then one should not use pdf\LaTeX.
+\item To include external graphics files, use the {\tt graphicx} package and scale the included graphic
+by some fraction of the ''textwidth'' variable.
+\item One should ensure that all external graphics files to be included are of the same type.
+\item If one is required to ''draw'' simple diagrams, I recommend using the {\tt PStricks} (postscript) or
+the {\tt pgf/TikZ} (non-postscript) package.
+\item For graphs or charts, make sure the labels are readable.
+\end{itemize}
+\note<1>{One can do just about any type of drawing with PStricks, but it does not work with pdf\LaTeX.  
+pgf/TikZ is the new kid on the block, and while not as powerful as PStricks, it still can do a lot, especially for
+simple diagrams.}
+\end{frame}
+
+
+\begin{frame}{Sample Drawing with PStricks}
+\psset{unit=0.1\textwidth}
+\begin{center}
+\begin{pspicture}(-4.5,-1.5)(4.5,2.5)
+\psarcn[linewidth=2pt]{->}(-3,1){1.2}{80}{45}
+\psarcn[linewidth=2pt]{->}(3,1){1.2}{80}{45}
+\pscircle(-3,-0.5){0.1}
+\pscircle(3,-0.5){0.1}
+\pscircle(-3,1){1}
+\pscircle[linestyle=none,fillstyle=solid,fillcolor=black](-3,1){0.4}
+\pscircle(3,1){1}
+\pscircle[linestyle=none,fillstyle=solid,fillcolor=black](3,1){0.6}
+\pspolygon[linewidth=1.2pt](-2,-1)(2,-1)(2,0)(-2,0)
+\psline[linewidth=1.2pt](-3.4,1)(-3.1,-0.5)
+\psline[linewidth=1.2pt](-3,-0.6)(3,-0.6)
+\psline[linewidth=1.2pt](3.6,1)(3.1,-0.5)
+\rput(0,0.3){\small Deposition Zone}
+\psline[linewidth=2pt]{<-}(-2.75,-0.35)(-2.2,-0.35)
+\rput[t](-2.25,0.1){\small V}
+\psline{|<->|}(-2,-1.2)(2,-1.2)
+\rput(0,-1.4){\small 2L}
+\end{pspicture}
+\end{center}
+\vspace{-10pt}
+\centerline{Simple Reel-to-Reel Processing System (side view)}
+\note<1>[item]{Note that there is no need to put the picture inside of a ''figure'' environment.  Figure
+environments are useful where one is referencing figures by number.  However, this is hard to do in a 
+presentation.}
+\note<1>[item]{Note the simulation of a figure title by using the ''centerline'' command.}
+\end{frame}
+
+\begin{frame}{Sample Inclusion of External Graphic}
+\begin{center}
+\includegraphics[width=0.59\textwidth,angle=-90]{1Dkmcbcf.ps}
+\end{center}
+\note<1>[item]{Scaling width to full textwidth may move the graphic off the page.  This may be an iterative process 
+to get it to look right.}
+\end{frame}
+
+\begin{frame}{Columns}
+\begin{columns}[c]
+\column{0.45\textwidth}
+\onslide<1-> Exact Solution \\ \onslide<2-> Computed Solution
+\column{0.45\textwidth}
+\begin{center}
+\onslide<1-> \includegraphics[width=0.50\columnwidth,angle=-90]{E4f4_u.eps} \\
+\onslide<2-> \includegraphics[width=0.50\columnwidth]{E4f4d4_s.tif.eps}
+\end{center}
+\end{columns}
+\note<1>[item]{Clever use of columns and external graphics.}
+\note<1>[item]{Graphics are probably too small though.}
+\end{frame}
+
+\begin{frame}{Movies}
+\begin{itemize}
+\item \href{run:./viewf6d2a_e}{f6d2a est -- UNIX}
+\item \href{run:f6d2a_e.gif}{f6d2a est -- Windoze}
+\end{itemize}
+\note<1>[item]{Note the use of the package {\tt hyperref} which allows for running external programs.  Note also that
+{\tt hyperref} is loaded by beamer anyway, so there is no need to explicitly load it.}
+\note<1>[item]{{\tt beamer} has other ways of dealing with this which may be better.}
+\end{frame}
+
+\section{Summary}
+
+\subsection*{}
+
+\begin{frame}{Comments}
+\begin{itemize}
+\item There are many different ways of accomplishing the same task with \LaTeX.  Once one finds something that
+works, stick with it until one finds a better way of doing it.
+\item One should definitely explore different themes with {\tt beamer}.  Make extensive use of the references listed
+at the end.
+\item Putting too many fancy things into a presentation takes away from the purpose of the presentation, i.e., the 
+content.  Sometimes basic is better.
+\item With {\tt beamer} flexibility is the key.  Note that {\tt beamer} provides a powerful alternative to 
+using Microsoft Powerpoint.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\begin{itemize}
+\item {\tt beamer} documentation
+\begin{itemize}
+\item {\tt /usr/share/texmf/tex/latex/beamer/doc}
+\item {\tt /usr/share/texmf/tex/latex/beamer/examples}
+\item {\tt /usr/share/texmf/tex/latex/beamer/solutions}
+\item {\tt /usr/share/texmf/tex/latex/beamer/themes}
+\end{itemize}
+\item {\tt PStricks}: {\tt http://tug.org/PSTricks/}
+\item {\tt pgf/TikZ}: {\tt /usr/share/texmf/tex/latex/pgf/doc/generic/pgf}
+\item {\tt \LaTeX\ Navigator}: {\tt http://tex.loria.fr/}
+\end{itemize}
+\end{frame}
+
+\end{document}
