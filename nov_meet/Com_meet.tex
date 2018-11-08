@@ -233,6 +233,7 @@ University of Tennessee \\ % Your institution for the title page
 %----------------------------------------------
 
 \section[A=3]{MARATHON}
+\subsection{Setup}
 %----------------------------------------------
 \begin{frame}
 \frametitle{Tritium Experiments}
@@ -318,9 +319,69 @@ University of Tennessee \\ % Your institution for the title page
 
 \end{columns}
 \end{frame}
+%---------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Vertical Drift Chamber(VDC)}
+	\begin{columns}
+		\column{0.55\textwidth}
+		\begin{figure}
+			\includegraphics[width=5cm]{../images/VDC}
+		\end{figure}		
+		\column{0.45\textwidth}
+		A dual VDC system is used to provide precise angular reconstruction of particle trajectories.
+		\begin{itemize}
+			\item U/V angle $\pm 45 ^\circ$
+			\item 368 wired per plane
+			\item 4.2mm spacing between wires
+			\item Online Efficiency determined by nearest neighbor method 
+		\end{itemize}
+	\end{columns}
+		
+		
 
 
+\end{frame}
+%---------------------------------------------------------------
 
+\begin{frame}
+\frametitle{Scintillators}
+\vspace{-8pt}
+	\begin{columns}
+		\column{0.45\textwidth}
+		\begin{block}{}
+			\begin{itemize}
+				\item Two Scintillating light detectors
+				\begin{itemize}
+					\item S0 large acceptance and low resolution
+					\item S2 16 bars capped by PMTs
+				\end{itemize}
+				\item Main source for trigger
+				\item Provide TOF(time of flight) $\&$ Used to help identify hadrons
+			\end{itemize}
+		
+		\end{block}
+	\column{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=5cm]{../images/Scins}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+%---------------------------------------------------------------
+\begin{frame}
+\vspace{-8pt}
+\begin{figure}
+	\includegraphics[width=12cm]{../images/trigger_1}
+	\caption{Florian Hauenstein}
+\end{figure}
+\end{frame}
+
+
+%---------------------------------------------------------------
+
+
+\subsection{Running}
 \begin{frame}
 \frametitle{The Run Period}
 
@@ -332,12 +393,44 @@ University of Tennessee \\ % Your institution for the title page
 		\column{0.55\textwidth}
 		\begin{itemize}
 			\item Ran from January 11th to April 12th 
-			\item Original Plan was to use mirror Kinematics on both arms march out in angle
+			\item Original Plan was to use mirror Kinematics on both arms marching them out in angle
 			\item Right arm dipole failed, on the first day,
 			\item Experts could not resolve the issue in a timely manner
 			\item Changed to only use the left arm, and skip a few kinematics settings where the spectrometer acceptance overlaps.
 		\end{itemize}
 	\end{columns}
+\end{frame}
+
+%--------------------------------------------------------
+
+\begin{frame}
+\frametitle{The Run Period}
+	\begin{columns}[c]
+	\column{0.45\textwidth}
+	\begin{block}{Shift Crew Task}
+		\begin{itemize}
+			\item Monitor Detector plots 
+			\item Record and observe event frequency
+			\item Observe target response including the temperature sensor attached to the target ladder.
+		\end{itemize}
+	\end{block}
+
+	\column{0.55\textwidth}
+
+	\vspace{-40pt}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/OnlineGui}
+	\end{figure}
+	\vspace{-20pt}
+	\begin{figure}
+		\includegraphics[width=5cm]{../images/scaler}
+	\end{figure}
+	\vspace{-20pt}
+	\begin{figure}
+		\includegraphics[width=5cm]{../images/lattertmps_g}
+	\end{figure}
+	
+\end{columns}
 \end{frame}
 
 
