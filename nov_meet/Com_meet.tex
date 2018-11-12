@@ -129,7 +129,7 @@ University of Tennessee \\ % Your institution for the title page
 			\begin{itemize}
 				\item Nucleon Structure Functions
 				\item Sea-Quark Distributions 
-				\item Gluon Distributions 
+			e	\item Gluon Distributions 
 				\item Expected $ F_A = NF_2^N + ZF_2^P $
 				\item Because the binding energies of the nucleons are several orders of magnitude smaller then the momentum transfer for an interaction in DIS region
 				\item Fermi interaction causing differentiation at high momentum transfer.
@@ -334,7 +334,7 @@ University of Tennessee \\ % Your institution for the title page
 			\item U/V angle $\pm 45 ^\circ$
 			\item 368 wired per plane
 			\item 4.2mm spacing between wires
-			\item Online Efficiency determined by nearest neighbor method 
+			\item Online Efficiency determined by nearest neighbor method \cite{nim}
 		\end{itemize}
 	\end{columns}
 \end{frame}
@@ -354,9 +354,9 @@ University of Tennessee \\ % Your institution for the title page
 		\begin{itemize}
 			\item Filled with $CO_2$
 			\item Index of refraction of 1.00041 and operated at 1 atm
-			\item Electron threshold of 0.017 GeV/c
-			\item Pion/proton threshold  of 4.8/32 GeV/c
-			\item 1.5/1 m radiator length of left/right arm 
+			\item Electron threshold of 0.017 $\frac{GeV}{c}$
+			\item Pion/proton threshold  of 4.8/32 $\frac{GeV}{c}$
+			\item 1.5/1 m radiator length of left/right arm \cite{nim}
 			
 
 		\end{itemize}
@@ -369,21 +369,29 @@ University of Tennessee \\ % Your institution for the title page
 \frametitle{Calorimeter}
 
 \begin{columns}
-	\column{0.45\textwidth}	
+	\column{0.55\textwidth}	
+	\vspace{-10pt}
 	\begin{figure}
-		\includegraphics[width=3cm]{../images/Cher}
+		\includegraphics[width=6cm]{../images/calo}
 	\end{figure}
+	\vspace{-10pt}
 	\begin{figure}
-		\includegraphics[width=5cm]{../images/cher_1pmt}
-	\end{figure}
-	\column{0.55\textwidth}
+		\includegraphics[width=6cm]{../images/PR1_2}
+	\end{figure}	
+
+	\column{0.5\textwidth}
 	\begin{itemize}
-		\item Filled with $CO_2$
-		\item Index of refraction of 1.00041 and operated at 1 atm
-		\item Electron threshold of 0.017 GeV/c
-		\item Pion/proton threshold  of 4.8/32 GeV/c
-		\item 1.5/1 m radiator length of left/right arm 
-		
+		\item Two layers of lead glass
+		\item LHRS -Both layers are stacked perpendicular to beam direction. 
+		\begin{itemize}
+			\item 48 Blocks, 80 blocks
+		\end{itemize}
+		\item RHRS -First layer perpendicular, second layer is parallel
+		\begin{itemize}
+			\item 34 Blocks, 34 blocks
+		\end{itemize}
+		\item With Chernenkov, pion suppression above 2$\frac{GeV}{c}$ of a factor of $2E5$ \cite{nim}
+
 		
 	\end{itemize}
 \end{columns}
@@ -405,7 +413,7 @@ University of Tennessee \\ % Your institution for the title page
 					\item S2 16 bars capped by PMTs
 				\end{itemize}
 				\item Main source for trigger
-				\item Provide TOF(time of flight) $\&$ Used to help identify hadrons
+				\item Provide TOF(time of flight) $\&$ Used to help identify hadrons \cite{nim}
 			\end{itemize}
 		
 		\end{block}
@@ -421,7 +429,7 @@ University of Tennessee \\ % Your institution for the title page
 \vspace{-8pt}
 \begin{figure}
 	\includegraphics[width=12cm]{../images/trigger_1}
-	\caption{Florian Hauenstein}
+	\caption{By Florian Hauenstein}
 \end{figure}
 \end{frame}
 
@@ -429,7 +437,8 @@ University of Tennessee \\ % Your institution for the title page
 %---------------------------------------------------------------
 
 
-\subsection{Running}
+\subsection{Run Period}
+
 \begin{frame}
 \frametitle{The Run Period}
 
@@ -481,6 +490,59 @@ University of Tennessee \\ % Your institution for the title page
 \end{columns}
 \end{frame}
 
+%-----------------------------------------------------------------------------
+\begin{frame}
+\frametitle{The Run Period}
+	\vspace{-20pt}
+%\hspace*{-10pt}
+	\begin{figure}
+		\includegraphics[width=12.5cm]{../images/whiteboard_2_20}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Run Period}
+	\begin{columns}[t]
+		\column{0.55\linewidth}
+		\vspace{-10pt}
+
+		\begin{figure}
+			\includegraphics[width=4.5cm]{../images/harpscan1}
+		\end{figure}
+
+		\vspace{-10pt}
+		\begin{figure}
+			\includegraphics[width=4.5cm]{../images/ION}
+		\end{figure}
+		\column{0.5\linewidth}
+		\vspace{-20pt}
+		\begin{block}{Tritium Safety Requirements}
+			\begin{itemize}
+				\item Harp and BPM Check!
+				\item Ion Chamber functionality test
+				\item Beam Center
+				\item Raster Size calibration. 
+			\end{itemize}	
+		\end{block}	
+			\vspace{-10pt}
+		\begin{figure}
+			\includegraphics[width=5cm]{../images/spot}
+		\end{figure}	
+	\end{columns}
+\end{frame}
+%------------------------------------------------------------------
+
+
+
+\begin{frame}
+\frametitle{The Run Period: Miscues}
+	
+
+\end{frame}
+
+
+
 
 
 \begin{frame}
@@ -497,6 +559,9 @@ University of Tennessee \\ % Your institution for the title page
 \bibitem[J.Seely, A. Daniel et al]{E3103} J.Seely, A. Daniel et al (2013) 
 \newblock New Measurements of the EMC Effect in Very Light Nuclei
 \newblock \emph{nucl-ex/0904.4448}.
+\bibitem[J. Alcorn et al.]{nim} J. Alcorn et al, (2004)
+\newblock Basic instrumentation for Hall A at Jefferson Lab
+\newblock NIM A 522(2004) 294-346
 
 \end{thebibliography}
 }
