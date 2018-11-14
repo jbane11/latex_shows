@@ -78,12 +78,13 @@
 }
 
 \usepackage{graphicx} % Allows including images
+\usepackage{tikz}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[font=small,skip=0pt]{caption}
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
-\logo{\includegraphics[width=0.05\textwidth]{../images/utlogo}}
+%\logo{\includegraphics[width=0.05\textwidth]{../images/utlogo}}
 \title[EMC A=3]{EMC Effect for A=3 } % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Jason Bane} % Your name
@@ -100,6 +101,12 @@ University of Tennessee \\ % Your institution for the title page
 \begin{frame}
 	\titlepage % Print the title page as the first slide
 \end{frame}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.8cm]{../images/utlogo}};
+\end{tikzpicture}}
+
 
 \begin{frame}
 \frametitle{Outline}
@@ -123,7 +130,7 @@ University of Tennessee \\ % Your institution for the title page
 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 		\column{.55\textwidth} % Left column and width
-		\vspace{-10pt}
+		\vspace{-15pt}
 		\begin{block}{}
 			European Muon Collaboration's (EMC) 1983  results for the lepton scattering experiment on Iron and Deuterium. 
 			\begin{itemize}
@@ -148,6 +155,7 @@ University of Tennessee \\ % Your institution for the title page
 %------------------------------------------------
 \begin{frame}
 \frametitle{EMC Effect}
+	\vspace{-10pt}
 	\begin{block}{}
 		European Muon Collaboration:
 			\begin{itemize}
@@ -459,9 +467,37 @@ University of Tennessee \\ % Your institution for the title page
 \end{frame}
 
 %--------------------------------------------------------
-
 \begin{frame}
-\frametitle{The Run Period}
+\begin{columns}[t]
+	\column{0.55\linewidth}
+%	\vspace{-10pt}
+	
+	\begin{figure}
+		\includegraphics[width=4.5cm]{../images/harpscan1}
+	\end{figure}
+	
+	\vspace{-10pt}
+	\begin{figure}
+		\includegraphics[width=4.5cm]{../images/ION}
+	\end{figure}
+	\column{0.5\linewidth}
+	\vspace{-20pt}
+	\begin{block}{Tritium Safety Requirements}
+		\begin{itemize}
+			\item Harp and BPM Check!
+			\item Ion Chamber functionality test
+			\item Beam Center
+			\item Raster Size calibration. 
+		\end{itemize}	
+	\end{block}	
+	\vspace{-10pt}
+	\begin{figure}
+		\includegraphics[width=5cm]{../images/spot}
+	\end{figure}	
+\end{columns}
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}
 	\begin{columns}[c]
 	\column{0.45\textwidth}
 	\begin{block}{Shift Crew Task}
@@ -492,7 +528,7 @@ University of Tennessee \\ % Your institution for the title page
 
 %-----------------------------------------------------------------------------
 \begin{frame}
-\frametitle{The Run Period}
+\frametitle{The MARATHON}
 	\vspace{-20pt}
 %\hspace*{-10pt}
 	\begin{figure}
@@ -500,50 +536,62 @@ University of Tennessee \\ % Your institution for the title page
 	\end{figure}
 \end{frame}
 
-
+%------------------------------------------------------------------
 \begin{frame}
-\frametitle{The Run Period}
-	\begin{columns}[t]
-		\column{0.55\linewidth}
-		\vspace{-10pt}
-
-		\begin{figure}
-			\includegraphics[width=4.5cm]{../images/harpscan1}
-		\end{figure}
-
-		\vspace{-10pt}
-		\begin{figure}
-			\includegraphics[width=4.5cm]{../images/ION}
-		\end{figure}
-		\column{0.5\linewidth}
-		\vspace{-20pt}
-		\begin{block}{Tritium Safety Requirements}
+\frametitle{Major Miscues}
+	\begin{block}{}
+		\begin{itemize}
+			\item Right Arm Dipole failed on January 11th
 			\begin{itemize}
-				\item Harp and BPM Check!
-				\item Ion Chamber functionality test
-				\item Beam Center
-				\item Raster Size calibration. 
-			\end{itemize}	
-		\end{block}	
-			\vspace{-10pt}
-		\begin{figure}
-			\includegraphics[width=5cm]{../images/spot}
-		\end{figure}	
-	\end{columns}
+				\item Return the dipole to functionally the following day
+				\item 01/13 - Dipole failed again, causing a chain reaction with the Left arm
+				\item Solution could not be found quickly
+				\item Change of Kinematic plan to use single HRS.
+				\item Recovered RHRS on 01/16 - Set to take data at theta of 36.12$^\circ$,  $x$ of 0.82 
+			\end{itemize}
+			\item A Transformer Failed on March 5th 
+			\begin{itemize}
+				\item Recovered on March 23rd
+				\item Spring run Period extended by 18 days
+				\item MARATHON took opportunistic data during recovery period 
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+
 \end{frame}
 %------------------------------------------------------------------
-
-
+\section{Analysis}
 
 \begin{frame}
-\frametitle{The Run Period: Miscues}
-	
+\frametitle{Analaysis}
+\begin{columns}
+\column{0.45\textwidth}
+	\begin{block}{Online Analysis}
+		\begin{itemize}
+			\item Quick Calibrations
+			\item Electron Counts
+			\item Comparable plots for detector checks
+		\end{itemize}
+	\end{block}
+	\begin{figure}
+		\includegraphics[width=5cm]{../images/det_check}
+	\end{figure}
 
+\column{0.45\textwidth}	
+	\begin{figure}
+		\includegraphics[width=5cm]{../images/cer_ped}
+	\end{figure}
+	\vspace{-20pt}
+	\begin{figure}
+		\includegraphics[width=5cm]{../images/G_E}
+	\end{figure}
+\end{columns}
 \end{frame}
 
 
 
 
+%------------------------------------------------------------------
 
 \begin{frame}
 \frametitle{References}
