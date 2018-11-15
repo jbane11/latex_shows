@@ -449,7 +449,7 @@ University of Tennessee \\ % Your institution for the title page
 
 \begin{frame}
 \frametitle{The Run Period}
-
+	\vspace{-20pt}
 	\begin{columns}
 		\column{0.45\textwidth}	
 		\begin{figure}
@@ -457,16 +457,42 @@ University of Tennessee \\ % Your institution for the title page
 		\end{figure}
 		\column{0.55\textwidth}
 		\begin{itemize}
-			\item Ran from January 11th to April 12th 
-			\item Original Plan was to use mirror Kinematics on both arms marching them out in angle
-			\item Right arm dipole failed, on the first day,
-			\item Experts could not resolve the issue in a timely manner
-			\item Changed to only use the left arm, and skip a few kinematics settings where the spectrometer acceptance overlaps.
+			\item Ran from January 11th to April 12th
+			\item Gaseous Tritium, Deuterium, Helium-3, and Hydrogen
+			\item Single Carbon Foil, Carbon foil with hole, and multi-foil
+			\item Rotated through targets to achieve equal statics and reduce the impact of unforeseen circumstances
 		\end{itemize}
 	\end{columns}
+	\begin{figure}
+	\includegraphics[width=6.5cm]{../images/whiteboard_2_20}
+	\end{figure}
 \end{frame}
 
 %--------------------------------------------------------
+\begin{frame}
+\frametitle{Major Miscues}
+\begin{block}{}
+	\begin{itemize}
+		\item Right Arm Dipole failed on January 11th
+		\begin{itemize}
+			\item Return the dipole to functionally the following day
+			\item 01/13 - Dipole failed again, causing a chain reaction with the Left arm
+			\item Solution could not be found quickly
+			\item Change of Kinematic plan to use single HRS.
+			\item Recovered RHRS on 01/16 - Set to take data at theta of 36.12$^\circ$,  $x$ of 0.82 
+		\end{itemize}
+		\item A Transformer Failed on March 5th 
+		\begin{itemize}
+			\item Recovered on March 23rd
+			\item Spring run Period extended by 18 days
+			\item MARATHON took opportunistic data during recovery period 
+		\end{itemize}
+	\end{itemize}
+\end{block}
+
+\end{frame}
+%------------------------------------------------------------------
+
 \begin{frame}
 \begin{columns}[t]
 	\column{0.55\linewidth}
@@ -526,44 +552,44 @@ University of Tennessee \\ % Your institution for the title page
 \end{columns}
 \end{frame}
 
-%-----------------------------------------------------------------------------
-\begin{frame}
-\frametitle{The MARATHON}
-	\vspace{-20pt}
-%\hspace*{-10pt}
-	\begin{figure}
-		\includegraphics[width=12.5cm]{../images/whiteboard_2_20}
-	\end{figure}
-\end{frame}
+%----------------------------------------------------------------------------
 
-%------------------------------------------------------------------
-\begin{frame}
-\frametitle{Major Miscues}
-	\begin{block}{}
-		\begin{itemize}
-			\item Right Arm Dipole failed on January 11th
-			\begin{itemize}
-				\item Return the dipole to functionally the following day
-				\item 01/13 - Dipole failed again, causing a chain reaction with the Left arm
-				\item Solution could not be found quickly
-				\item Change of Kinematic plan to use single HRS.
-				\item Recovered RHRS on 01/16 - Set to take data at theta of 36.12$^\circ$,  $x$ of 0.82 
-			\end{itemize}
-			\item A Transformer Failed on March 5th 
-			\begin{itemize}
-				\item Recovered on March 23rd
-				\item Spring run Period extended by 18 days
-				\item MARATHON took opportunistic data during recovery period 
-			\end{itemize}
-		\end{itemize}
-	\end{block}
-
-\end{frame}
-%------------------------------------------------------------------
 \section{Analysis}
 
 \begin{frame}
-\frametitle{Analaysis}
+\frametitle{Analysis}
+	\begin{columns}
+	\column{0.45\textwidth}
+	\begin{block}{Data Analysis Task}
+		\begin{itemize}
+			\item Data decoding 
+			\item Online analysis
+			\item Full detector calibrations 
+			\item Systematic errors 
+			\item Detector efficiencies
+			\item Yield Extraction
+		\end{itemize}
+	\end{block}
+	\column{0.45\textwidth}
+	\begin{block}{Monte Carlo Analysis}
+		\begin{itemize}
+			\item Monte Carlo Tunning
+				\begin{itemize}
+					\item Offsets
+					\item Target Parameters
+					\item Reconstruction functions
+				\end{itemize}
+			\item Event weighting 
+			\item Acceptance studies
+			
+		\end{itemize}
+	\end{block}
+	\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Analysis}
 \begin{columns}
 \column{0.45\textwidth}
 	\begin{block}{Online Analysis}
@@ -587,6 +613,33 @@ University of Tennessee \\ % Your institution for the title page
 	\end{figure}
 \end{columns}
 \end{frame}
+%------------------------------------------------------------------
+
+\begin{frame}
+\frametitle{Data Decoding}
+	\begin{block}{The Hall A Analyzer}
+		\begin{itemize}	
+			\item An object-oriented, modular framework built on top of ROOT. 
+			\item Use modular classes to build a detector package 
+			\item Libraries to calculate physics variables 
+		\end{itemize}
+	\end{block}
+	\begin{figure}
+	\includegraphics[width=5cm]{../images/ana}
+\end{figure}
+\end{frame}
+
+%------------------------------------------------------------------
+\begin{frame}
+	
+\end{frame}
+
+%------------------------------------------------------------------
+\begin{frame}
+	
+\end{frame}
+
+%------------------------------------------------------------------
 
 
 
