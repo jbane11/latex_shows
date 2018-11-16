@@ -97,6 +97,7 @@ University of Tennessee \\ % Your institution for the title page
 \date{\today} % Date, can be changed to a custom date
 
 \begin{document}
+\captionsetup{font=small,skip=0pt}
 
 \begin{frame}
 	\titlepage % Print the title page as the first slide
@@ -240,14 +241,15 @@ University of Tennessee \\ % Your institution for the title page
 \end{frame}
 %----------------------------------------------
 
-\section[A=3]{MARATHON}
+\section[MARATHON]{MARATHON}
 \subsection{Setup}
 %----------------------------------------------
 \begin{frame}
 \frametitle{Tritium Experiments}
+	\vspace{-15pt}
 	\begin{figure}
-	\includegraphics[width =12cm]{../images/tritium_ov}
-\end{figure}
+		\includegraphics[width =12cm]{../images/tritium_ov}
+	\end{figure}
 \end{frame}
 
 \begin{frame}
@@ -376,9 +378,9 @@ University of Tennessee \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Calorimeter}
 
-\begin{columns}
+\begin{columns}[h]
 	\column{0.55\textwidth}	
-	\vspace{-10pt}
+	\vspace{-25pt}
 	\begin{figure}
 		\includegraphics[width=6cm]{../images/calo}
 	\end{figure}
@@ -390,15 +392,16 @@ University of Tennessee \\ % Your institution for the title page
 	\column{0.5\textwidth}
 	\begin{itemize}
 		\item Two layers of lead glass
-		\item LHRS -Both layers are stacked perpendicular to beam direction. 
-		\begin{itemize}
+		\item LHRS -Both layers are stacked perpendicular to beam direction.
+		\vspace{-13pt}
+ 		\begin{itemize}
 			\item 48 Blocks, 80 blocks
 		\end{itemize}
 		\item RHRS -First layer perpendicular, second layer is parallel
 		\begin{itemize}
 			\item 34 Blocks, 34 blocks
 		\end{itemize}
-		\item With Chernenkov, pion suppression above 2$\frac{GeV}{c}$ of a factor of $2E5$ \cite{nim}
+		\item With Chernenkov, pion suppression above 2$\frac{GeV}{c}$ of a factor of $2e5$ \cite{nim}
 
 		
 	\end{itemize}
@@ -554,7 +557,7 @@ University of Tennessee \\ % Your institution for the title page
 
 %----------------------------------------------------------------------------
 
-\section{Analysis}
+\section[Analysis]{Analysis}
 
 \begin{frame}
 \frametitle{Analysis}
@@ -565,9 +568,8 @@ University of Tennessee \\ % Your institution for the title page
 			\item Data decoding 
 			\item Online analysis
 			\item Full detector calibrations 
-			\item Systematic errors 
 			\item Detector efficiencies
-			\item Yield Extraction
+			\item Systematic Studies
 		\end{itemize}
 	\end{block}
 	\column{0.45\textwidth}
@@ -585,20 +587,70 @@ University of Tennessee \\ % Your institution for the title page
 		\end{itemize}
 	\end{block}
 	\end{columns}
+	\begin{block}{}
+		\begin{itemize}
+			\item Cross section extraction through Data to Monte Carlo ratio method
+			\item Compare Cross Section of A=3 Nuclei to that of Deuterium to calculate EMC effect 
+		\end{itemize}
+	\end{block}
+\end{frame}
+%------------------------------------------------------------------ 
+\begin{frame}
+\frametitle{Data Decoding}
+\vspace{-5pt}
+\begin{block}{The Hall A Analyzer}
+	\begin{itemize}	
+		\item An object-oriented, modular framework built on top of ROOT. 
+		\item Use modular classes to build a detector package 
+		\item Libraries to calculate physics variables 
+	\end{itemize}
+	\begin{columns}
+		\column{0.55\textwidth}
+		\begin{itemize}
+			\item THaRasterBeamClass
+			\item THaCherenkov
+			\item THaTrackingDetector
+		\end{itemize}
+		\column{0.55\textwidth}
+		\begin{itemize}
+			\item Tri$\_$Beam$\_$Eloss
+			\item TriBCM
+			\item TriFADCBPM
+		\end{itemize}		
+	\end{columns}
+\end{block}
+\vspace{-190pt}
+\begin{figure}
+	\includegraphics[width=4cm]{../images/ana}
+\end{figure}
+\vspace{90pt}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/histos}
+	\end{figure}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\includegraphics[width=4cm]{../images/branches}
+	\end{figure}
+\end{columns}
+
 \end{frame}
 
+%------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Analysis}
+\frametitle{Online Analysis}
+\begin{block}{}
 \begin{columns}
 \column{0.45\textwidth}
-	\begin{block}{Online Analysis}
+
 		\begin{itemize}
 			\item Quick Calibrations
 			\item Electron Counts
 			\item Comparable plots for detector checks
 		\end{itemize}
-	\end{block}
+
 	\begin{figure}
 		\includegraphics[width=5cm]{../images/det_check}
 	\end{figure}
@@ -611,36 +663,148 @@ University of Tennessee \\ % Your institution for the title page
 	\begin{figure}
 		\includegraphics[width=5cm]{../images/G_E}
 	\end{figure}
+
 \end{columns}
+\end{block}
 \end{frame}
 %------------------------------------------------------------------
 
+
 \begin{frame}
-\frametitle{Data Decoding}
-	\begin{block}{The Hall A Analyzer}
-		\begin{itemize}	
-			\item An object-oriented, modular framework built on top of ROOT. 
-			\item Use modular classes to build a detector package 
-			\item Libraries to calculate physics variables 
-		\end{itemize}
+
+	\vspace{-1pt}
+	\begin{block}{Detector Calibrations}
+		\vspace{-10pt}
+		\begin{columns}[]
+			\column{0.5\textwidth}
+				\begin{figure}
+
+					\caption{BCM calibration}
+					\vspace{-20pt}
+					\includegraphics[width=7cm]{../images/BCM_cal_nb}
+				\end{figure}
+				\column{0.5\textwidth}
+				\vspace{-20pt}
+
+				\begin{figure}
+					
+					\caption{Gain and Pedestal calibration}
+						\vspace{-10pt}
+					\includegraphics[width=5cm]{../images/GC_cal}
+				\end{figure}
+
+		\end{columns}
 	\end{block}
-	\begin{figure}
-	\includegraphics[width=5cm]{../images/ana}
+	
+	
+\end{frame}
+
+%------------------------------------------------------------------
+\begin{frame}
+
+\begin{block}{Detector Calibrations}
+\begin{figure}
+	\caption{Beta calibration}
+	\includegraphics[width=8.5cm]{../images/beta_cal}
 \end{figure}
+\vspace{-15pt}
+\begin{figure}
+	\caption{Calorimeter Energy Calibration}
+	\includegraphics[width=8.5cm]{../images/e_cal}
+\end{figure}
+
+\end{block}	
 \end{frame}
 
 %------------------------------------------------------------------
 \begin{frame}
-	
-\end{frame}
+\frametitle{BPM Calibration}
+	\vspace{-30pt}
+	\begin{columns}
+		\column{0.45\textwidth}
+		\begin{figure}
+			\caption{Harp Scan}
+			\vspace{-20pt}
+			\includegraphics[width=5.5cm]{../images/harpscan}
+		\end{figure}
+			\column{0.45\textwidth}
+		\vspace{-10pt}
+		\begin{figure}
+			\caption{BPM pedestals}
+			\vspace{-2pt}
+			\includegraphics[width=4.5cm]{../images/BPM_ped}
+		\end{figure}
+	\end{columns}
+	\vspace{-10pt}
+	\begin{figure}
+		\caption{ Before and After}
+		\vspace{-5pt}
+		\includegraphics[width=8cm]{../images/BPM_b_a}
+	\end{figure}
 
+\end{frame}
 %------------------------------------------------------------------
 \begin{frame}
-	
+\frametitle{Efficiencies}
+	\begin{columns}
+
+		\column{0.35\textwidth}
+		\vspace{-80pt}
+		\begin{itemize}
+			\item Particle ID
+			\item Tracking Efficiency
+			\item Dead Time
+			\item Trigger Efficiency
+			
+		\end{itemize}			
+			
+	\column{0.75\textwidth}
+	\vspace{-40pt}
+	\begin{figure}
+		\includegraphics[width=7cm]{../images/pid_eff}
+	\end{figure}
+	\vspace{-25pt}
+	\begin{figure}
+		\includegraphics[width=7cm]{../images/DT}
+	\end{figure}
+	\end{columns}
 \end{frame}
-
 %------------------------------------------------------------------
+\begin{frame}
+\frametitle{Systematic Studies}
+	\vspace{-20pt}
+	\begin{columns}
+		\column{0.45\textwidth}	
+		\begin{figure}\caption{Density Fluctuations}\vspace{-10pt} \includegraphics[width=5cm]{../images/dens}\end{figure}
+		\vspace{-10pt}
+		\begin{figure}\includegraphics[width=5cm]{../images/ecc}
+		\caption{End Cap Contamination}\end{figure}
+		\column{0.55\textwidth}	
+		\begin{figure}\caption{Tritium beta decay} \includegraphics[width=5cm]{../images/decay}\end{figure}
+		\vspace{-10pt}
+		\begin{figure}\includegraphics[width=5cm]{../images/pos}
+		\caption{Charge Symmetric background}\end{figure}
+	\end{columns}
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}
+\frametitle{Yield Extraction}
+	\begin{block}{}
+	Number of detect
+	
+		
+		\vspace{10pt}
+		
+		
+		$ Yield_{data} = \frac{\left(N_e - BackGround\right)}{Efficency }   $
 
+	\end{block}
+	$ \frac{d\sigma}{d\Omega dE^\prime} = \sigma^{mod} * \left[\frac{Yield_{data} \left( E^\prime,\theta\right)} {Yield_{MC}\left(E^\prime,\theta\right)}\right] $
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}
+
+\end{frame}
 
 
 
