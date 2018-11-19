@@ -81,6 +81,22 @@
 \usepackage{tikz}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[font=small,skip=0pt]{caption}
+\usepackage{cancel}
+
+
+\newcommand\parallelcontent[2]{
+	\begin{columns}[t]
+		\column{0.55\textwidth} #1
+		\column{0.48\textwidth} #2
+	\end{columns}
+}
+\newcommand\parallelitem[2]{
+	\parallelcontent
+	{\begin{itemize} \item #1 \end{itemize}}
+	{\begin{itemize} \item #2 \end{itemize}}
+}
+
+
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -95,9 +111,9 @@ University of Tennessee \\ % Your institution for the title page
 \textit{jbane1@vols.utk.edu} % Your email address
 }
 \date{\today} % Date, can be changed to a custom date
-
-\begin{document}
 \captionsetup{font=small,skip=0pt}
+\begin{document}
+
 
 \begin{frame}
 	\titlepage % Print the title page as the first slide
@@ -109,8 +125,7 @@ University of Tennessee \\ % Your institution for the title page
 \end{tikzpicture}}
 
 
-\begin{frame}
-\frametitle{Outline}
+\begin{frame}{Outline}
  % Table of contents slide, comment this block out to remove it
 	\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
@@ -125,9 +140,7 @@ University of Tennessee \\ % Your institution for the title page
 
 %\subsection{} % A subsection can be created just before a set of slides with a common theme to further break down your presentation into chunks
 
-\begin{frame}
-\frametitle{EMC Effect}
-
+\begin{frame}{EMC Effect}
 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 
 		\column{.55\textwidth} % Left column and width
@@ -137,7 +150,7 @@ University of Tennessee \\ % Your institution for the title page
 			\begin{itemize}
 				\item Nucleon Structure Functions
 				\item Sea-Quark Distributions 
-			e	\item Gluon Distributions 
+				\item Gluon Distributions 
 				\item Expected $ F_A = NF_2^N + ZF_2^P $
 				\item Because the binding energies of the nucleons are several orders of magnitude smaller then the momentum transfer for an interaction in DIS region
 				\item Fermi interaction causing differentiation at high momentum transfer.
@@ -154,34 +167,28 @@ University of Tennessee \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------
-\begin{frame}
-\frametitle{EMC Effect}
+\begin{frame}{EMC Effect}
 	\vspace{-10pt}
 	\begin{block}{}
 		European Muon Collaboration:
+		\begin{itemize}
+			\item  Nuclear F2 structure function per nucleon different than that of deuterium
+			\item Quark distribution functions modified in the nuclear medium
+			\item Defined the magnitude of the EMC effect as the slope of the $\frac{A}{D}$ per nucleon cross section ratio from 0.3 to 0.7 in x.
+			\item Current Explanations
 			\begin{itemize}
-				\item  Nuclear F2 structure function per nucleon different			than that of deuterium
-				\item Quark distribution functions modified in the nuclear
-				medium
-				\item Defined the magnitude of the EMC effect as the slope of the $\frac{A}{D}$ per nucleon cross section ratio from 0.3 to 0.7 in x.
-				\item Current Explanations
-				\begin{itemize}
-					\item Binding effects beyond nucleon Fermi motion
-					\item Enhancement of pion field with increasing A
-					\item Influence of possible multi-quark clusters
-					\item Change in the quark confinement scale in nuclei
-				\end{itemize}
-				\item No unique/universally accepted theory for explanation
-				of effect up to date. 
+				\item Binding effects beyond nucleon Fermi motion
+				\item Enhancement of pion field with increasing A
+				\item Influence of possible multi-quark clusters
+				\item Change in the quark confinement scale in nuclei
 			\end{itemize}
-		\end{block}
-
-	
+			\item No unique/universally accepted theory for explanation of effect up to date. 
+		\end{itemize}
+	\end{block}
 \end{frame}
 
 %----------------------------------------------
-\begin{frame}
-\frametitle{EMC Effect}
+\begin{frame}{EMC Effect}
 
 	\begin{figure}
 		\caption{\label{EMC_slac} SLAC experiment E139 \cite{slac_emc}.}
@@ -192,27 +199,22 @@ University of Tennessee \\ % Your institution for the title page
 \end{frame}
 
 %----------------------------------------------
-\begin{frame}
-\frametitle{EMC Effect}
-\begin{columns}[]
-
-\column{.5\textwidth} % Left column and width
-	\vspace{-15pt}
-\begin{figure}
-	\caption{\label{E03103} JLab experiment "EMC in light Nuclei" \cite{E3103}.}
-	\vspace{-20pt}
-	\includegraphics[width =5cm]{../images/carbon_be_he4}
-\end{figure}
-
-\column{.55\textwidth} % Left column and width
-	\hspace{10pt}
-\begin{figure}
-
-	\caption{\label{E03103_1} EMC as a function of Nuclear Density \cite{E3103}.}
-
-	\includegraphics[width =6cm]{../images/PRL_slopes}
-\end{figure}
-\end{columns}
+\begin{frame}{EMC Effect}
+	\begin{columns}
+		\column{.5\textwidth} % Left column and width
+		\vspace{-15pt}
+		\begin{figure}
+			\caption{\label{E03103} JLab experiment "EMC in light Nuclei" \cite{E3103}.}
+			\vspace{-20pt}
+			\includegraphics[width =5cm]{../images/carbon_be_he4}
+		\end{figure}
+		\column{.55\textwidth} % Left column and width
+		\hspace{10pt}
+		\begin{figure}
+			\caption{\label{E03103_1} EMC as a function of Nuclear Density \cite{E3103}.}
+			\includegraphics[width =6cm]{../images/PRL_slopes}
+		\end{figure}
+	\end{columns}
 \end{frame}
 
 %----------------------------------------------
@@ -418,7 +420,7 @@ University of Tennessee \\ % Your institution for the title page
 \vspace{-8pt}
 	\begin{columns}
 		\column{0.45\textwidth}
-		\begin{block}{Trigger}
+		\begin{block}{Triggering Detector}
 			\begin{itemize}
 				\item Two Scintillating light detectors
 				\begin{itemize}
@@ -720,8 +722,7 @@ University of Tennessee \\ % Your institution for the title page
 \end{frame}
 
 %------------------------------------------------------------------
-\begin{frame}
-\frametitle{BPM Calibration}
+\begin{frame}{BPM Calibration}
 	\vspace{-30pt}
 	\begin{columns}
 		\column{0.45\textwidth}
@@ -747,8 +748,7 @@ University of Tennessee \\ % Your institution for the title page
 
 \end{frame}
 %------------------------------------------------------------------
-\begin{frame}
-\frametitle{Efficiencies}
+\begin{frame}{Efficiencies}
 	\begin{columns}
 
 		\column{0.35\textwidth}
@@ -773,8 +773,7 @@ University of Tennessee \\ % Your institution for the title page
 	\end{columns}
 \end{frame}
 %------------------------------------------------------------------
-\begin{frame}
-\frametitle{Systematic Studies}
+\begin{frame}{Systematic Studies}
 	\vspace{-20pt}
 	\begin{columns}
 		\column{0.45\textwidth}	
@@ -793,7 +792,11 @@ University of Tennessee \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Yield Extraction}
 	\begin{block}{}
-	Number of detect
+		Cross section by Monte carlo ratio  method:
+		
+			$ \frac{d\sigma}{d\Omega dE^\prime} = \sigma^{mod} * \left[\frac{Yield_{data} \left( E^\prime,\theta\right)} {Yield_{MC}\left(E^\prime,\theta\right)}\right] $
+		
+	Number of detected Electrons
 	
 		
 		\vspace{10pt}
@@ -802,11 +805,43 @@ University of Tennessee \\ % Your institution for the title page
 		$ Yield_{data} = \frac{\left(N_e - BackGround\right)}{Efficency }   $
 
 	\end{block}
-	$ \frac{d\sigma}{d\Omega dE^\prime} = \sigma^{mod} * \left[\frac{Yield_{data} \left( E^\prime,\theta\right)} {Yield_{MC}\left(E^\prime,\theta\right)}\right] $
+
 \end{frame}
 %------------------------------------------------------------------
 \begin{frame}
 
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}
+
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}
+
+\end{frame}
+
+%------------------------------------------------------------------
+\begin{frame}
+	\begin{block}{Timeline}
+	
+		\parallelitem{Calibrations}{Done}
+		\parallelitem{Monte Carlo Tunning $ \approx 85 \%$}{ January 2018}
+		\parallelitem{Detector Efficiencies $ \approx 50 \%$}{ January 2018}
+%		\hspace{10pt}		
+		\begin{columns}
+		\column{0.25\textwidth}
+		\begin{itemize}
+			\item PID is done
+		\end{itemize}
+		\column{0.65\textwidth}
+		\begin{itemize}
+			\item Tracking, Trigger .... WIP
+		\end{itemize}
+		\end{columns}
+		\parallelitem{Systematic Studies $ \approx 50 \%$  Need to focus on error estimation.}{ February 2018}
+			
+
+	\end{block}		
 \end{frame}
 
 
