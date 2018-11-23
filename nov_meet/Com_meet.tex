@@ -382,7 +382,7 @@ University of Tennessee \\ % Your institution for the title page
 \begin{frame}
 \frametitle{Calorimeter}
 
-\begin{columns}[h]
+\begin{columns}[t]
 	\column{0.55\textwidth}	
 	\vspace{-25pt}
 	\begin{figure}
@@ -791,14 +791,27 @@ University of Tennessee \\ % Your institution for the title page
 \end{frame}
 %------------------------------------------------------------------
 \begin{frame}{}
+\begin{columns}
+\column{0.45\textwidth}
 		\begin{block}{Monte Carlo}
 			\begin{itemize}
-				\item 
+				\item Generate events in target space
+				\item Pass through detector aperture
+				\item Use optics matrix to project back to target from focal plane.
+				\item Tune Simulation to match detector response
+				\item Adjust initial parameters    
 			\end{itemize}
-			
 		\end{block}
-		
-
+\column{0.45\textwidth}
+	\vspace{-20pt}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/dp_ytar_1207.png}
+	\end{figure}
+	\vspace{-30pt}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/xp_yp_foc_1207.png}
+	\end{figure}
+\end{columns}
 \end{frame}
 
 
