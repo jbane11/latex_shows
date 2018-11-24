@@ -792,14 +792,19 @@ University of Tennessee \\ % Your institution for the title page
 %------------------------------------------------------------------
 \begin{frame}{}
 \begin{columns}
-\column{0.45\textwidth}
+\column{0.5\textwidth}
 		\begin{block}{Monte Carlo}
 			\begin{itemize}
 				\item Generate events in target space
 				\item Pass through detector aperture
 				\item Use optics matrix to project back to target from focal plane.
 				\item Tune Simulation to match detector response
-				\item Adjust initial parameters    
+				\item Adjust initial parameters
+				\item Use model to weight events
+				\begin{itemize}
+					\item Deep Inelastic Bodek Fit \cite{bodek}
+					\item Quasi elastic  and elastic  
+				\end{itemize}    
 			\end{itemize}
 		\end{block}
 \column{0.45\textwidth}
@@ -915,9 +920,12 @@ E^\prime,\theta\right)} {Yield_{MC}\left(E^\prime,\theta\right)}\right] $
 \bibitem[J.Seely, A. Daniel et al]{E3103} J.Seely, A. Daniel et al (2013) 
 \newblock New Measurements of the EMC Effect in Very Light Nuclei
 \newblock \emph{nucl-ex/0904.4448}.
+
 \bibitem[J. Alcorn et al.]{nim} J. Alcorn et al, (2004)
 \newblock Basic instrumentation for Hall A at Jefferson Lab
 \newblock NIM A 522(2004) 294-346
+\bibitem[A. Bodek and U.K. Yang]{bodek} A. Bodek and U.K. Yang
+\newblock Nuclear Physics B, Procc. Suppl. Fall (2002) 
 
 \end{thebibliography}
 }
