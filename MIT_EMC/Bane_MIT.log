@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.2.23)  15 MAR 2019 16:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.2.23)  15 MAR 2019 16:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1222,7 +1222,12 @@ Package pdftex.def Info: ../images/utlogo.png used on input line 329.
 
 pdfTeX warning: /usr/bin/pdflatex (file ../images/H3_final.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
->] [13
+>]
+File: ../images/utlogo.png Graphic file (type png)
+ <use ../images/utlogo.png>
+Package pdftex.def Info: ../images/utlogo.png used on input line 352.
+(pdftex.def)             Requested size: 24.2605pt x 22.76228pt.
+ [13
 
 ]
 \tf@nav=\write6
@@ -1234,11 +1239,11 @@ pdfTeX warning: /usr/bin/pdflatex (file ../images/H3_final.pdf): PDF inclusion:
 \tf@snm=\write8
 \openout8 = `Bane_MIT.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 347.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 347.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 357.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 357.
  (./Bane_MIT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 347.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 347.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 357.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 357.
 Package rerunfilecheck Info: File `Bane_MIT.out' has not changed.
 (rerunfilecheck)             Checksum: EEA4687FAB8858225D3D4E435D65976C;49.
 
@@ -1246,13 +1251,13 @@ Package rerunfilecheck Info: File `Bane_MIT.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 347.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 357.
  ) 
 Here is how much of TeX's memory you used:
- 19131 strings out of 495063
- 365603 string characters out of 3182201
- 436831 words of memory out of 3000000
- 21828 multiletter control sequences out of 15000+200000
+ 19132 strings out of 495063
+ 365632 string characters out of 3182201
+ 436856 words of memory out of 3000000
+ 21829 multiletter control sequences out of 15000+200000
  16709 words of font info for 62 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,16n,57p,414b,946s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1268,7 +1273,7 @@ blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy8.pfb>
-Output written on Bane_MIT.pdf (13 pages, 1762252 bytes).
+Output written on Bane_MIT.pdf (13 pages, 1762795 bytes).
 PDF statistics:
  778 PDF objects out of 1000 (max. 8388607)
  522 compressed objects within 6 object streams
