@@ -82,7 +82,7 @@
 \usepackage{tikz}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[font=small,skip=0pt]{caption}
-\usepackage{../../latex_pcks/cancel}
+
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -104,7 +104,7 @@
 
 \begin{document}
 \begin{frame}
-\titlepage % Print the title page as the first slide
+	\titlepage % Print the title page as the first slide
 \end{frame}
 
 \addtobeamertemplate{frametitle}{}{%
@@ -116,138 +116,232 @@
 %------------------------------------------------------------------
 \begin{frame}
 \frametitle{The MARATHON Experiment}
-MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic Electron Scattering off the Tritium and Helium MirrOr Nuclei.
-\vspace{-10pt}
-\begin{columns}[t]
-	
-	\column{.45\textwidth} % L column and width
-	
-	\begin{figure}
-		\includegraphics[width =5cm]{../images/mirror}
-	\end{figure}
-	\vspace{-25pt}
-	\begin{figure}
-		\includegraphics[width=5cm]{../images/d_u}
-		\caption{d/u quark distribution ratios}
-	\end{figure}
-	
-	\column{.55\textwidth} % Right column and width
-	\begin{itemize}
-		\item Lightest and simplest mirror system
+	MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic Electron Scattering off the Tritium and Helium MirrOr Nuclei.
+	\vspace{-10pt}
+	\begin{columns}[t]
+		\column{.45\textwidth} % L column and width
+		\begin{figure}
+			\includegraphics[width =5cm]{../images/mirror}
+		\end{figure}
+		\vspace{-25pt}
+		\begin{figure}
+			\includegraphics[width=5cm]{../images/d_u}
+			\caption{d/u quark distribution ratios}
+		\end{figure}
+		\column{.55\textwidth} % Right column and width
+		\begin{itemize}
+			\item Lightest and simplest mirror system
 		\begin{itemize}
 			\item  Number of protons in $^3H =$ neutrons in $^3He$
 		\end{itemize}
-		\item Differences in the nuclear effects are small
-		\item Improve the current measurement and understanding of $F^n_2/F^p_2$ ratio
-		\item Restrict the assumptions and parameters made in the model calculations of the down to up quark distribution ratio
-		\item 6 students from 4 universities
-	\end{itemize}
-	
-	
-\end{columns}
+			\item Differences in the nuclear effects are small
+			\item Improve the current measurement and understanding of $F^n_2/F^p_2$ ratio
+			\item Restrict the assumptions and parameters made in the model calculations of the down to up quark distribution ratio
+			\item 6 students from 4 universities
+		\end{itemize}
+	\end{columns}
 \end{frame}
 %------------------------------------------------------------------
 \section{Hall A at JLab}
 \begin{frame}
-\begin{block}{Jefferson Lab Hall A}
-	\begin{figure}
-		\includegraphics[width=12.0cm]{../images/HallaHRS.pdf}
-	\end{figure}
-	
-\end{block}
-
+	\begin{block}{Jefferson Lab Hall A}
+		\begin{figure}
+			\includegraphics[width=12.0cm]{../images/HallaHRS.pdf}
+		\end{figure}
+	\end{block}
 \end{frame}
 %------------------------------------------------------------------
 
-\begin{frame}{Cross Section}
-\begin{block}{}
-	
-	\centering
-	$\frac{d\sigma}{d\Omega dE^\prime} =  \frac{Yield}{Luminosity} = \frac{Ne - BG }{Luminosity *  \epsilon} $
-	
-	\centering
-	$N_e = \textit{L} * \left( \frac{d\sigma}{d\Omega dE^\prime} \right) * \left( \Delta E^\prime \Delta \Omega\right) \epsilon * A \left(E^\prime \theta \right)  + Back  Ground$
-	
-	\begin{itemize}
-		\item $\textit{L}$ Luminosity $\equiv$ \# of electrons per scattering centers
-		\item $\left( \Delta E^\prime \Delta \Omega\right) = $ size of bin
-		\item $\epsilon = $ efficiencies
-		\item  $A \left(E^\prime \theta \right) =$ Acceptance 
-		
-	\end{itemize}
-	
-	$ Yield_{data} = \frac{\left(N_e - BackGround\right)}{Efficency } =  \textit{L} *\sigma^{data} * \left( \Delta E^\prime \Delta \Omega\right)*  A \left(E^\prime \theta \right)$
-	
-	$ Yield_{MC} = \textit{L} *\sigma^{mod} * \left( \Delta E^\prime \Delta \Omega\right)*  A \left(E^\prime \theta \right)$
-\end{block}
-
-
-
-\begin{center}
-	
-	\begin{block}{}
-		Cross section by Monte carlo ratio  method:
+\begin{frame}{Cross Section Analysis}
+	\begin{block}{Exacting Yield from Data}
+		\centering
+		$\frac{d\sigma}{d\Omega dE^\prime} =  \frac{Yield}{Luminosity} = \frac{Ne - BG }{Luminosity *  \epsilon} $
+		\begin{itemize}
+			\item Luminosity $\equiv$ \# of electrons per scattering centers, needs correction due to density changes
+			\item $\epsilon = $ efficiencies
+			\item  BG $ = $ Back Ground
+		\end{itemize}
+	\end{block}	
+	\begin{block}{Cross section by Monte carlo ratio}	
+		$ Yield_{data} = \frac{\left(N_e - BackGround\right)}{Efficency } =  \textit{L} *\sigma^{data} * \left( \Delta E^\prime \Delta \Omega\right)*  A \left(E^\prime \theta \right)$
+		$ Yield_{MC} = \textit{L} *\sigma^{mod} * \left( \Delta E^\prime \Delta \Omega\right)*  A \left(E^\prime \theta \right)$
 		\centering $ \frac{d\sigma}{d\Omega dE^\prime} = \sigma^{mod} * \left[\frac{Yield_{data} \left( 
 			E^\prime,\theta\right)} {Yield_{MC}\left(E^\prime,\theta\right)}\right] $
-		
 	\end{block}	
-\end{center}
-
-
-
 \end{frame}
 %------------------------------------------------------------------
-\begin{frame}
-\begin{columns}
-\column{0.4\textwidth}
-\begin{block}{Monte Carlo to Data}
-	\begin{itemize}
-		\item For Deuterium on kin15, we have 66 runs
-		\item Use enough runs to average 10k events per bin
-		\item monitoring the kinematic overlapping region
-	\end{itemize}
+\begin{frame}{Electron selection}
+	\begin{block}{}
+		\begin{columns}
+			\column{0.35\textwidth}
+			\begin{itemize}
+ 		 		\setlength{\parskip}{0pt}
+				\setlength{\itemsep}{0pt plus 1pt}
+				\item Electron ID is done via the Cerenkov and two layer of a total calorimeter.
+				\item Deposit large percentage of it's energy into the total calorimeter system.
+				\item Trigger significant amount of cerenkov radiation
+			\end{itemize}		
+			\column{0.55\textwidth}
+			\begin{figure}
+					\caption{Cerenkov vs. Total energy absorbed}
+					\includegraphics[width=7.0cm]{../images/PID_2d.pdf}
+			\end{figure}
+		\end{columns}
+	\end{block}
+\end{frame}
+%------------------------------------------------------------------
+
+\begin{frame}{Efficiency of the selection}
+	\begin{block}{}
+		\begin{columns}
+			\column{0.45\textwidth}
+			\vspace{-18pt}
+			\begin{figure}
+				First and second layer of calorimeter with electron and non-electron sampling \par\medskip
+				\includegraphics[width=4.50cm]{../images/Lprl1.pdf}
+			\end{figure}
+			\vspace{-23pt}
+			\begin{figure}
+				\includegraphics[width=4.50cm]{../images/Lprl2.pdf}
+			\end{figure}
+			\column{0.55\textwidth}
+			Determine the Efficiency
+			
+			\begin{itemize}
+				\item Electron sampling in two detectors
+				\item Make threshold cut in the third
+				\item Overall PID efficiency $> 98\% $
+			\end{itemize}
+			\vspace{-16pt}
+			\begin{figure}
+				\includegraphics[width=5.50cm]{../images/Lcerasum.pdf}
+			\end{figure}
+			\vspace{-16pt}
+			Total cerenkov ADC signal with electron and non-electron sampling \par\medskip
+		\end{columns}
+	\end{block}
+\end{frame}
+%------------------------------------------------------------------
+\begin{frame}{Back Ground}
+	\begin{block}{$\frac{Ne - \textbf{BG} }{Luminosity *  \epsilon}$}
+		\begin{columns}
+			\column{0.45\textwidth}
+			\begin{itemize}
+				\item Pion contamination
+				\item Charge Symmetric Back ground
+			\end{itemize}
+					\column{0.45\textwidth}
+			\begin{itemize}
+				\item End Cap contamination
+   				\item Beta Decay of Tritium
+   			\end{itemize}
+		\end{columns}	
+		\begin{itemize}
+			\item Pion contamination is corrected for via the PID efficiency  $ < 1\%$ 
+			\item Beta Decay of Tritium to Helium was discussed by Tyler Kutz - Stony Brook University 
+		\end{itemize}		
+	\end{block}
+\end{frame}
+%------------------------------------------------------------------
+
+
+
+\begin{frame}{End cap Contamination}
+	\begin{block}{Contamination from Aluminum end caps}
+		\begin{columns}
+		\column{0.45\textwidth}
+		\begin{itemize}
+			\item Normalize end caps of Empty target to Gas filled target
+			\item Normalized by measured thickness of end caps
+			\item Scan Vertex Z location
+			\item $3\%$ at low x$_{bj}$ for Helium-3 and Tritium
+			\item Study by Tong Su and Tyler Hague 
+		\end{itemize}
+	
+		\column{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=5.0cm]{../images/ECC_kin1.pdf}
+		\end{figure}
+		\begin{figure}
+			\includegraphics[width=5.0cm]{../images/ECC1_kin1.pdf}
+		\end{figure}
+	
+		\end{columns}		
+	\end{block}
+
+\end{frame}
+
+\begin{frame}{Charge Symmetric back ground}
+\begin{block}{}
+	\begin{columns}
+		\column{0.45\textwidth}
+		\begin{itemize}
+			\item High energy Photons decay into an e$^+$e$^-$ pair
+			\item Account for the pair produced e$^-$ by detecting the pair produced e$^+$
+			\item Used HRS positive polarity settings at kinematics 1,2 and 3
+			\item Fit results with exponential function to project out to high kinematics.
+		\end{itemize}
+		\column{0.45\textwidth}
+		\vspace{-12pt}
+		\begin{figure}
+			\textbf{Tritium positron contamination}
+			\includegraphics[width=5.0cm]{/home/jbane/images/positron_H3_bane.pdf}
+		\end{figure}
+			\vspace{-20pt}
+		\begin{figure}
+			\textbf{Deuterium positron contamination}
+			\includegraphics[width=5.0cm]{/home/jbane/images/PC.pdf}
+		\end{figure}
+	\end{columns}
+	
 \end{block}
-\column{0.55\textwidth}
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=7.5cm]{../images/D2_all}
-\end{figure}
-\vspace{-40pt}
-\begin{figure}
-	\includegraphics[width=7.5cm]{../images/He3_all}
-\end{figure}
-\end{columns}
-
 \end{frame}
 
-%------------------------------------------------------------------
-\begin{frame}
-\begin{block}{DIS (e,$e^\prime$) Cross section}
-\begin{figure}
-\includegraphics[width=12.0cm]{../images/all_final}
-\end{figure}
+\begin{frame}{Monte Carlo Comparison}
+		\vspace{-22pt}
+	\begin{block}{Compare Monte Carlo to Data}
+		Detector acceptance variables. 
+		\vspace{-12pt}
+		\begin{figure}[t]%
+			\includegraphics[width=5cm,height=5cm]{../images/xp_yp_tar_1207.png}
+			\includegraphics[width=5cm,height=5cm]{../images/dp_ytar_1207.png}
+		\end{figure}
+		\vspace{-12pt}	
+		Top Left :theta(out of plane angle in mrads from center)  Top Right: Dp(momentum $\%$ from center).
+		Bottom Left :phi(in plane angle in mrads from center)  Top Right: Y target(vertex location in spectrometer coordinate frame).
+	\end{block}	
+\end{frame}
 
+\begin{frame}{Cross section via monte carlo ratio}
+\begin{block}{\textbf{Data to Monte Carlo ratio}}
+	\begin{figure}
+	\hspace*{-0.5cm}\includegraphics[height=5cm,width=5.50cm]{../images/H_all.pdf}			\hspace*{0.5cm}\includegraphics[height=5cm,width=5.50cm]{../images/H3_all.pdf}
+	\end{figure}
 \end{block}
-
 \end{frame}
 
-%------------------------------------------------------------------
-\begin{frame}
-\begin{block}{EMC effect}
-\begin{figure}
-\includegraphics[width=12.0cm]{../images/EMC_final}
-\end{figure}
-\vspace{-20pt}
-\begin{itemize}
-\item Includes statistical error 
-\item Need to add error from systematic studies
-
-\end{itemize}
-
+\begin{frame}{Cross section via monte carlo ratio}
+\begin{block}{\textbf{Cross Section}}
+	\begin{figure}
+		\hspace*{-0.5cm}\includegraphics[height=5cm,width=5.50cm]{../images/H_final.pdf}			\hspace*{0.5cm}\includegraphics[height=5cm,width=5.50cm]{../images/H3_final.pdf}
+	\end{figure}
 \end{block}
-
 \end{frame}
 
-%------------------------------------------------------------------
+
+
+\begin{frame}{}
+	\begin{block}{Conclusion}
+		\begin{itemize}
+			\item Complete Acceptance study and determine the systematic associated
+			\item Study the systematic error from radiative corrections
+			\item Finalize Absolute Cross section for Helium-3, Tritium, and Deuterium 
+			\item EMC effect for A=3 nuclei
+		\end{itemize}
+	\end{block}	
+\end{frame}
+	
+	
+
 
 \end{document} 
