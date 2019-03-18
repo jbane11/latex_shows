@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.2.23)  15 MAR 2019 16:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.2.23)  18 MAR 2019 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,69 +1129,59 @@ File: /home/jbane/images/positron_H3_bane.pdf Graphic file (type pdf)
 
 <use /home/jbane/images/positron_H3_bane.pdf>
 Package pdftex.def Info: /home/jbane/images/positron_H3_bane.pdf used on input 
-line 300.
+line 299.
 (pdftex.def)             Requested size: 142.26378pt x 70.7959pt.
-
-</home/jbane/images/PC.pdf, id=466, 1658.195pt x 793.96625pt>
-File: /home/jbane/images/PC.pdf Graphic file (type pdf)
-
-<use /home/jbane/images/PC.pdf>
-Package pdftex.def Info: /home/jbane/images/PC.pdf used on input line 300.
-(pdftex.def)             Requested size: 142.26378pt x 68.11015pt.
 File: ../images/utlogo.png Graphic file (type png)
  <use ../images/utlogo.png>
-Package pdftex.def Info: ../images/utlogo.png used on input line 300.
+Package pdftex.def Info: ../images/utlogo.png used on input line 299.
 (pdftex.def)             Requested size: 24.2605pt x 22.76228pt.
 
-Overfull \vbox (0.8655pt too high) detected at line 300
+Overfull \vbox (9.08867pt too high) detected at line 299
  []
 
 [9
 
- </home/jbane/images/positron_H3_bane.pdf> </home/jbane/images/PC.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file /home/jbane/images/PC.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->] <../images/xp_yp_tar_1207.png, id=507, 700.6175pt x 477.785pt>
+ </home/jbane/images/positron_H3_bane.pdf>]
+<../images/xp_yp_tar_1207.png, id=500, 700.6175pt x 477.785pt>
 File: ../images/xp_yp_tar_1207.png Graphic file (type png)
 
 <use ../images/xp_yp_tar_1207.png>
-Package pdftex.def Info: ../images/xp_yp_tar_1207.png used on input line 315.
+Package pdftex.def Info: ../images/xp_yp_tar_1207.png used on input line 314.
 (pdftex.def)             Requested size: 142.25912pt x 142.25761pt.
 
-<../images/dp_ytar_1207.png, id=508, 700.6175pt x 477.785pt>
+<../images/dp_ytar_1207.png, id=501, 700.6175pt x 477.785pt>
 File: ../images/dp_ytar_1207.png Graphic file (type png)
 
 <use ../images/dp_ytar_1207.png>
-Package pdftex.def Info: ../images/dp_ytar_1207.png used on input line 315.
+Package pdftex.def Info: ../images/dp_ytar_1207.png used on input line 314.
 (pdftex.def)             Requested size: 142.25912pt x 142.25761pt.
 File: ../images/utlogo.png Graphic file (type png)
  <use ../images/utlogo.png>
-Package pdftex.def Info: ../images/utlogo.png used on input line 315.
+Package pdftex.def Info: ../images/utlogo.png used on input line 314.
 (pdftex.def)             Requested size: 24.2605pt x 22.76228pt.
 
-Overfull \vbox (4.35449pt too high) detected at line 315
+Overfull \vbox (4.35449pt too high) detected at line 314
  []
 
 [10
 
  <../images/xp_yp_tar_1207.png> <../images/dp_ytar_1207.png>]
-<../images/H_all.pdf, id=535, 429.2838pt x 311.4837pt>
+<../images/H_all.pdf, id=528, 429.2838pt x 311.4837pt>
 File: ../images/H_all.pdf Graphic file (type pdf)
 
 <use ../images/H_all.pdf>
-Package pdftex.def Info: ../images/H_all.pdf used on input line 323.
+Package pdftex.def Info: ../images/H_all.pdf used on input line 322.
 (pdftex.def)             Requested size: 156.48749pt x 142.26712pt.
 
-<../images/H3_all.pdf, id=536, 429.2838pt x 311.4837pt>
+<../images/H3_all.pdf, id=529, 429.2838pt x 311.4837pt>
 File: ../images/H3_all.pdf Graphic file (type pdf)
 
 <use ../images/H3_all.pdf>
-Package pdftex.def Info: ../images/H3_all.pdf used on input line 323.
+Package pdftex.def Info: ../images/H3_all.pdf used on input line 322.
 (pdftex.def)             Requested size: 156.48749pt x 142.26712pt.
 File: ../images/utlogo.png Graphic file (type png)
  <use ../images/utlogo.png>
-Package pdftex.def Info: ../images/utlogo.png used on input line 323.
+Package pdftex.def Info: ../images/utlogo.png used on input line 322.
 (pdftex.def)             Requested size: 24.2605pt x 22.76228pt.
  [11
 
@@ -1199,33 +1189,22 @@ Package pdftex.def Info: ../images/utlogo.png used on input line 323.
 
 pdfTeX warning: /usr/bin/pdflatex (file ../images/H3_all.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->] <../images/H_final.pdf, id=576, 540.88635pt x 326.01173pt>
-File: ../images/H_final.pdf Graphic file (type pdf)
+>] <../images/multisigma.pdf, id=569, 666.86328pt x 312.36702pt>
+File: ../images/multisigma.pdf Graphic file (type pdf)
 
-<use ../images/H_final.pdf>
-Package pdftex.def Info: ../images/H_final.pdf used on input line 331.
-(pdftex.def)             Requested size: 156.48987pt x 142.26663pt.
-
-<../images/H3_final.pdf, id=577, 554.84474pt x 326.01173pt>
-File: ../images/H3_final.pdf Graphic file (type pdf)
-
-<use ../images/H3_final.pdf>
-Package pdftex.def Info: ../images/H3_final.pdf used on input line 331.
-(pdftex.def)             Requested size: 156.48994pt x 142.26663pt.
+<use ../images/multisigma.pdf>
+Package pdftex.def Info: ../images/multisigma.pdf used on input line 330.
+(pdftex.def)             Requested size: 298.75272pt x 142.26544pt.
 File: ../images/utlogo.png Graphic file (type png)
  <use ../images/utlogo.png>
-Package pdftex.def Info: ../images/utlogo.png used on input line 331.
+Package pdftex.def Info: ../images/utlogo.png used on input line 330.
 (pdftex.def)             Requested size: 24.2605pt x 22.76228pt.
  [12
 
- <../images/H_final.pdf> <../images/H3_final.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ../images/H3_final.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
->]
+ <../images/multisigma.pdf>]
 File: ../images/utlogo.png Graphic file (type png)
  <use ../images/utlogo.png>
-Package pdftex.def Info: ../images/utlogo.png used on input line 354.
+Package pdftex.def Info: ../images/utlogo.png used on input line 353.
 (pdftex.def)             Requested size: 24.2605pt x 22.76228pt.
  [13
 
@@ -1239,11 +1218,11 @@ Package pdftex.def Info: ../images/utlogo.png used on input line 354.
 \tf@snm=\write8
 \openout8 = `Bane_MIT.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 358.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 358.
  (./Bane_MIT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 358.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 358.
 Package rerunfilecheck Info: File `Bane_MIT.out' has not changed.
 (rerunfilecheck)             Checksum: EEA4687FAB8858225D3D4E435D65976C;49.
 
@@ -1251,13 +1230,13 @@ Package rerunfilecheck Info: File `Bane_MIT.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 359.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
  ) 
 Here is how much of TeX's memory you used:
- 19132 strings out of 495063
- 365632 string characters out of 3182201
+ 19122 strings out of 495063
+ 365403 string characters out of 3182201
  436862 words of memory out of 3000000
- 21829 multiletter control sequences out of 15000+200000
+ 21821 multiletter control sequences out of 15000+200000
  16709 words of font info for 62 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,16n,57p,414b,822s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1273,10 +1252,10 @@ blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy8.pfb>
-Output written on Bane_MIT.pdf (13 pages, 1764732 bytes).
+Output written on Bane_MIT.pdf (13 pages, 1549165 bytes).
 PDF statistics:
- 778 PDF objects out of 1000 (max. 8388607)
- 522 compressed objects within 6 object streams
+ 718 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
  28 named destinations out of 1000 (max. 500000)
- 183 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
