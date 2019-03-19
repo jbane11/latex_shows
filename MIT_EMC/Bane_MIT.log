@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.2.23)  18 MAR 2019 16:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2019.2.23)  19 MAR 2019 11:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1166,19 +1166,19 @@ Overfull \vbox (4.35449pt too high) detected at line 314
 [10
 
  <../images/xp_yp_tar_1207.png> <../images/dp_ytar_1207.png>]
-<../images/H_all.pdf, id=528, 429.2838pt x 311.4837pt>
+<../images/H_all.pdf, id=528, 458.53496pt x 326.01173pt>
 File: ../images/H_all.pdf Graphic file (type pdf)
 
 <use ../images/H_all.pdf>
 Package pdftex.def Info: ../images/H_all.pdf used on input line 322.
-(pdftex.def)             Requested size: 156.48749pt x 142.26712pt.
+(pdftex.def)             Requested size: 156.48753pt x 142.26663pt.
 
-<../images/H3_all.pdf, id=529, 429.2838pt x 311.4837pt>
+<../images/H3_all.pdf, id=529, 454.59837pt x 326.01173pt>
 File: ../images/H3_all.pdf Graphic file (type pdf)
 
 <use ../images/H3_all.pdf>
 Package pdftex.def Info: ../images/H3_all.pdf used on input line 322.
-(pdftex.def)             Requested size: 156.48749pt x 142.26712pt.
+(pdftex.def)             Requested size: 156.48978pt x 142.26663pt.
 File: ../images/utlogo.png Graphic file (type png)
  <use ../images/utlogo.png>
 Package pdftex.def Info: ../images/utlogo.png used on input line 322.
@@ -1189,7 +1189,7 @@ Package pdftex.def Info: ../images/utlogo.png used on input line 322.
 
 pdfTeX warning: /usr/bin/pdflatex (file ../images/H3_all.pdf): PDF inclusion: m
 ultiple pdfs with page group included in a single page
->] <../images/multisigma.pdf, id=569, 666.86328pt x 312.36702pt>
+>] <../images/multisigma.pdf, id=708, 666.86328pt x 312.36702pt>
 File: ../images/multisigma.pdf Graphic file (type pdf)
 
 <use ../images/multisigma.pdf>
@@ -1233,10 +1233,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 358.
  ) 
 Here is how much of TeX's memory you used:
- 19122 strings out of 495063
- 365403 string characters out of 3182201
- 436862 words of memory out of 3000000
- 21821 multiletter control sequences out of 15000+200000
+ 19120 strings out of 495063
+ 365374 string characters out of 3182201
+ 436888 words of memory out of 3000000
+ 21819 multiletter control sequences out of 15000+200000
  16709 words of font info for 62 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,16n,57p,414b,822s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1252,10 +1252,10 @@ blic/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy8.pfb>
-Output written on Bane_MIT.pdf (13 pages, 1549165 bytes).
+Output written on Bane_MIT.pdf (13 pages, 1541843 bytes).
 PDF statistics:
- 718 PDF objects out of 1000 (max. 8388607)
- 501 compressed objects within 6 object streams
+ 862 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
  28 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 
