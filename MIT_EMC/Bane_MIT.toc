@@ -1,2 +1,1 @@
-\beamer@endinputifotherversion {3.26pt}
 \beamer@sectionintoc {1}{Hall A at JLab}{3}{0}{1}
