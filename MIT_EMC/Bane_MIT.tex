@@ -155,11 +155,12 @@
 \begin{frame}{Cross Section Analysis}
 	\begin{block}{Exacting Yield from Data}
 		\centering
-		$\frac{d\sigma}{d\Omega dE^\prime} =  \frac{Yield}{Luminosity} = \frac{Ne - BG }{Luminosity *  \epsilon} $
+		$\frac{d\sigma}{d\Omega dE^\prime} =  \frac{Yield}{Luminosity} = \frac{Ne - BG }{Luminosity *  \epsilon * Acc(E^\prime ,\theta)} $
 		\begin{itemize}
 			\item Luminosity $\equiv$ \# of electrons per scattering centers, needs correction due to density changes
 			\item $\epsilon = $ efficiencies, will focus on particle ID efficiency 
 			\item  BG $ = $ background
+			\item $Acc(E^\prime ,\theta) =$ acceptance function for data
 		\end{itemize}
 	\end{block}	
 	\begin{block}{Cross section by Monte carlo ratio}	
@@ -292,12 +293,12 @@
 		\vspace{-40pt}
 		\begin{figure}
 			\textbf{Pair Production}
-			\includegraphics[width=3.0cm]{/home/jbane/latex_shows/images/pp_FD.png}
+			\includegraphics[width=3.0cm]{../images/pp_FD.png}
 		\end{figure}
 		\vspace{-20pt}
 		\begin{figure}
 			\textbf{Tritium positron contamination}
-			\includegraphics[width=5.0cm]{/home/jbane/images/positron_H3_bane.pdf}
+			\includegraphics[width=5.0cm]{../images/positron_H3_bane.pdf}
 		\end{figure}
 
 	\end{columns}
