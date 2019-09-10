@@ -83,7 +83,7 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[font=small,skip=0pt]{caption}
 \usepackage{cancel}
-
+%\usepackage{enumitem}
 
 \newcommand\parallelcontent[2]{
 	\begin{columns}[t]
@@ -128,7 +128,7 @@ University of Tennessee \\ % Your institution for the title page
 
 \begin{frame}{Outline}
  % Table of contents slide, comment this block out to remove it
-	\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+	%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -139,19 +139,7 @@ University of Tennessee \\ % Your institution for the title page
 \section[MARATHON]{MARATHON Introduction}
 \subsection[Introduction]{Introduction}
 %----------------------------------------------
-\iffalse
-\begin{frame}
-\frametitle{Agenda for the Workshop on Experiments with Tritium\\ at JLab}
-\vspace{-15pt}
-\begin{block}{Sept. 20-21, 1999 at JLab}
-\begin{figure}
-	\includegraphics[width =12cm]{../images/pac_agenda.png}
-\end{figure}
-\end{block}
-\end{frame}
-\fi
-%----------------------------------------------
-%----------------------------------------------
+
 \begin{frame}
 \frametitle{Tritium Experiments}
 \vspace*{-25pt}
@@ -193,8 +181,69 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 \end{frame}
 
 %----------------------------------------------------
+\section[EMC]{The EMC Effect}
+
+\begin{frame}
+\frametitle{The EMC Effect}
+\begin{columns}[t]
+	\column{.55\textwidth}
+	\vspace{-35pt}
+	\begin{figure}
+		\includegraphics[width =7cm]{../images/Thesis/EMC.png}
+		\caption*{}
+	\end{figure}
+	\column{.45\textwidth}
+	\centering
+	\textbf{ European Muon Collaboration}
+	\begin{itemize}
+		\item Expected Unity $\rightarrow$ Binding $<$ interaction
+		\item F$^A$ = $Z \cdot F^p + (A-Z)\cdot F^n$  
+		\item Unexpected Relative Decrease
+		\item EMC Effect $\equiv$ magnitude of the decrease
+	\end{itemize}
+	
+\end{columns}
+\end{frame}
 %----------------------------------------------
 
+
+
+\begin{frame}{EMC Effect}
+
+\begin{figure}
+\caption*{\label{EMC_slac} SLAC experiment E139 \cite{slac_emc} .}
+\includegraphics[width =12cm]{../images/EMC_slac_horiz.png}
+\end{figure}
+
+
+\end{frame}
+
+%----------------------------------------------
+\begin{frame}{EMC Effect}
+\begin{columns}
+\column{.5\textwidth} % Left column and width
+\vspace{-20pt}
+\begin{figure}
+\caption*{\label{E03103} JLab experiment E03103 \cite{E3103} }
+\vspace{-20pt}
+\includegraphics[width =5cm]{../images/carbon_be_he4}
+\end{figure}
+\column{.55\textwidth} % Left column and width
+\hspace{10pt}
+\begin{figure}
+\caption*{\label{E03103_1} EMC as a function of Nuclear Density. \cite{E3103}}
+\includegraphics[width =6cm]{../images/PRL_slopes}
+\end{figure}
+\centering
+Scaled by $\frac{\left(A-1\right)}{A}$
+\end{columns}
+\end{frame}
+
+
+
+
+%----------------------------------------------
+\section[DIS]{Deep Inelastic Scattering}
 \begin{frame}
 \frametitle{Deep Inelastic Scattering (DIS)}
 \vspace*{-20pt}
@@ -213,7 +262,7 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 \end{columns}
 	\vspace*{10pt}
 	\centering
-	\Large	$\sigma_{eN} = \frac{\alpha^2}{eE^2sin^4(\frac{\theta}{2})} [\frac{F_2(Q^2,\nu)}{\nu}cos^2\frac{\theta}{2} + \frac{2F_1(Q^2,\nu)}{M}sin^2\frac{\theta}{2}] $	
+	\Large	$\sigma_{eN} = \frac{\alpha^2}{4E^2sin^4(\frac{\theta}{2})} [\frac{F_2(Q^2,\nu)}{\nu}cos^2\left(\frac{\theta}{2}\right) + \frac{2F_1(Q^2,\nu)}{M}sin^2\left(\frac{\theta}{2}\right)] $	
 \end{frame}
 
 \begin{frame}
@@ -221,103 +270,70 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 \begin{block}{DIS ??????}
 	\begin{figure}[]
 		\centering
-		\textbf{ }\par\medskip
+	%	\textbf{Electron - Nucleus Scattering   }\par\medskip
 		\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect.pdf}
 		\vspace{20pt}
-		\caption*{e + N $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
-		\label{wspect}
+		\caption*{ \cite{deltaIsobar}.}
+		
 	\end{figure}
 
 \end{block}
 \end{frame}
 
+
 %----------------------------------------------
-\iffalse
+
 \begin{frame}
 %frametitle{DIS Cross Section}
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_Elas.png}
+\end{figure}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.5\textwidth} % Left column and width		
+	\column{.34\textwidth} % Left column and width
+	$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
+	\vspace{-30pt}
 	\begin{figure}[]
-		\centering
-		\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_Elas.pdf.png}
-		\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
-		\label{wspect}
+		\includegraphics[height=3.5cm]{../images/elast_draw.png}
 	\end{figure}
-	\column{.5\textwidth} % Left column and width
+	
+	\column{.34\textwidth} % Left column and width
+	
+	\column{.34\textwidth} % Left column and width
+	
+	
+	
+\end{columns}
+\end{frame}
 
-		$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
+%----------------------------------------------
+%----------------------------------------------
 
-		\begin{figure}[]
-			\includegraphics[width=4cm]{../images/ele_draw.png}
-		\end{figure}
+\begin{frame}
+%frametitle{DIS Cross Section}
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_QE.png}
+\end{figure}
+\vspace*{-0.5cm}
+\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+	\column{.34\textwidth} % Left column and width
+	$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
+	\begin{figure}[]
+		\includegraphics[width=3.5cm]{../images/elast_draw.png}
+	\end{figure}
+	\column{.36\textwidth} % Left column and width
+%	\vspace{5pt}
+	$\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}\\
+	\vspace{-20pt}
+	\begin{figure}[]
+		\includegraphics[width=3.5cm]{../images/quais_draw.png}
+	\end{figure}
+	\column{.3\textwidth} % Left column and width
+
 		
-		
-
-	\end{columns}
-\end{frame}
-\fi
-%----------------------------------------------
-
-
-\begin{frame}
-%frametitle{DIS Cross Section}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.5\textwidth} % Left column and width		
-	\begin{figure}[]
-		\centering
-		\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_2.png}
-		\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
-		\label{wspect}
-	\end{figure}
-	\column{.5\textwidth} % Left column and width
-	
-	$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-
-	
-	
-\end{columns}
-\end{frame}
-%----------------------------------------------
-
-
-%First frame - just elastic
-
-\iffalse
-\begin{frame}
-%frametitle{DIS Cross Section}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.5\textwidth} % Left column and width		
-	\begin{figure}[]
-		\centering
-		\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_1.png}
-		\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
-
-	\end{figure}
-
-	$\bullet$ \textbf{\textcolor{blue}{Inelastic scattering}}\\
-
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-	
-	\column{.5\textwidth} % Left column and width
-	
-	$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-	$\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}	
-	
-	
 \end{columns}
 \end{frame}
 
@@ -326,77 +342,33 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 
 \begin{frame}
 %frametitle{DIS Cross Section}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.5\textwidth} % Left column and width		
-	\begin{figure}[]
-		\centering
-		\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_2.png}
-		\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
-		\label{wspect}
-	\end{figure}
-	
-	$\bullet$ \textbf{\textcolor{blue}{Inelastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-	
-	\column{.5\textwidth} % Left column and width
-	
-	$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-	$\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}	
-	
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_DIS.png}
+\end{figure}
+\begin{columns}[t]
+	\column{.3\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}
+\begin{figure}[]
+	\includegraphics[width=3.5cm]{../images/elast_draw.png}
+\end{figure}
+\column{.3\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}
+	\vspace{-10pt}
+\begin{figure}[]
+	\includegraphics[width=3.5cm]{../images/quais_draw.png}
+\end{figure}
+\column{.38\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{blue}{DIS}}
+\vspace{8pt}
+\begin{figure}[]
+	\includegraphics[width=3.5cm]{../images/dis_draw.png}
+\end{figure}
 	
 \end{columns}
 \end{frame}
 
-%----------------------------------------------
-\fi
-%----------------------------------------------
-
-\begin{frame}
-%frametitle{DIS Cross Section}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.5\textwidth} % Left column and width		
-	\begin{figure}[]
-		\centering
-		\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_4.png}
-		\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
-		\label{wspect}
-	\end{figure}
-	
-	$\bullet$ \textbf{\textcolor{blue}{Inelastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-
-	\column{.5\textwidth} % Left column and width
-	
-	$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}
-	$\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
-	
-	\begin{figure}[]
-		\includegraphics[width=4cm]{../images/ele_draw.png}
-	\end{figure}	
-
-	
-\end{columns}
-\end{frame}
-
-%----------------------------------------------
 
 \begin{frame}
 \frametitle{Why DIS?}
@@ -409,15 +381,8 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 	\caption*{Ratio of $2x\cdot F_1(x)$ and $F_2(x)$ vs. $x$ \cite{PnN,IntroHEP}.}
 	\label{fig:spin1/2}
 \end{figure} 
-			\vspace*{-10pt}
-\begin{block}{}
-	\begin{itemize}
-		\item 
 
-		\item a
-	\end{itemize}
-	
-\end{block}
+
 	\column{.5\textwidth} % Left column and width
 \begin{figure}[t]
 	\vspace*{-30pt}
@@ -428,93 +393,40 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 \end{figure} 
 \end{columns}
 \end{frame}
-\section[EMC]{The EMC Effect}
+
+%----------------------------------------------
+\section[Experiment]{The Experimental Setup}
+\subsection[Equipment]{The Experimental Setup}
 
 \begin{frame}
-\frametitle{The EMC Effect}
-	\begin{columns}
-	\column{.65\textwidth}
-		\vspace{-15pt}
+The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Accelerator Facility.\\
+
+\vspace{-10pt}
+\begin{columns}[c]
+	\column{.55\textwidth}
 		\begin{figure}
-		\includegraphics[width =7cm]{../images/Thesis/EMC.png}
-		\caption*{}
+			\includegraphics[width=5.5cm]{../images/cebaf.pdf}
 		\end{figure}
-		\column{.5\textwidth}
-		\begin{itemize}
-			\item Unexpected Decrease
-			\item 
-		\end{itemize}
-\end{columns}
-\end{frame}
-%----------------------------------------------
-
-
-
-\begin{frame}{EMC Effect}
-
-\begin{figure}
-	\caption*{\label{EMC_slac} SLAC experiment E139 \cite{slac_emc} .}
-	\includegraphics[width =12cm]{../images/EMC_slac_horiz.png}
-\end{figure}
-
-
-\end{frame}
-
-%----------------------------------------------
-\begin{frame}{EMC Effect}
-\begin{columns}
-\column{.5\textwidth} % Left column and width
-\vspace{-20pt}
-\begin{figure}
-	\caption*{\label{E03103} JLab experiment E03103 \cite{E3103} }
-	\vspace{-20pt}
-	\includegraphics[width =5cm]{../images/carbon_be_he4}
-\end{figure}
-\column{.55\textwidth} % Left column and width
-\hspace{10pt}
-\begin{figure}
-	\caption*{\label{E03103_1} EMC as a function of Nuclear Density. \cite{E3103}}
-	\includegraphics[width =6cm]{../images/PRL_slopes}
-\end{figure}
-\centering
-Scaled by $\frac{\left(A-1\right)}{A}$
-\end{columns}
-\end{frame}
-
-%----------------------------------------------
-\subsection[Experiment]{The Experimental Setup}
-\begin{frame}
-\frametitle{CEBAF}
-
-The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Accelerator Facility.
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=6.5cm]{../images/cebaf.pdf}
-\end{figure}
-
-\end{frame}
-%---------------------------------------------------------------
-\begin{frame}
-\frametitle{Hall A $\&$ The HRSs}
-
-
-\vspace{-20pt}
-\begin{columns}
-\column{0.45\textwidth}
-\begin{figure}
-	\includegraphics[width=6cm]{../images/halla.pdf}
-\end{figure}
-\column{0.45\textwidth}
-\begin{figure}
-	\includegraphics[width=6cm]{../images/HRS_cartoon}
-\end{figure}
-
+	\column{.45\textwidth}
+		\begin{block}{}
+			\begin{itemize}
+				\addtolength{\itemindent}{-1em}
+				\item $\approx$ 2.2 GeV per revolution
+				\item 12 GeV for Hall D
+				\item Superconducting RF cavities
+				\item RF separators split the beam to each Hall
+				\item [] \textbf{MARATHON purposed to use:}
+				\item 11 GeV Beam	
+				\item 22.5 $\mu$A current
+				\item Hall A's spectrometers and Big Bite Spectrometer
+			\end{itemize}
+		\end{block}
 \end{columns}
 \end{frame}
 %---------------------------------------------------------------
 \begin{frame}
 \frametitle{Tritium Target Cell}
-\begin{columns}
+\begin{columns}[]
 	\column{0.45\textwidth}
 	First tritium target at JLab
 	\begin{itemize}
@@ -535,7 +447,62 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{columns}
 \end{frame}
 
+%----------------------------------------------
+\begin{frame}
+\begin{columns}
+\hspace*{-0.8cm}
+\column{0.45\textwidth}
+\centering 
+\textbf{The Big Bite Spectrometer}
+
+\begin{figure}
+\hspace*{-1.2cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
+\end{figure}
+\hspace*{0.5cm}
+\column{0.5\textwidth}
+	\begin{block}{Preparing Big Bite}
+		\begin{itemize}
+			\item Refurbishing signal electronics and cables
+			\item Testing then repairing or replacing PMTs
+			\item Building front end electronics and coincidence trigger logic
+			\item Testing High voltage power sources and providing power to the detectors
+		\end{itemize}
+	\end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\centering 
+\textbf{The Big Bite Spectrometer}
+\begin{figure}
+	\includegraphics[width=12cm]{../images/bbpic.JPG}
+\end{figure}
+\end{frame}
+%----------------------------------------------
+
+
+%---------------------------------------------------------------
+\begin{frame}
+\frametitle{Hall A}
+\begin{figure}
+	\includegraphics[width=10.5cm]{../images/halla.pdf}
+\end{figure}
+\end{frame}
+
+%---------------------------------------------------------------
+\begin{frame}
+\frametitle{High Resolution Spectrometers (HRSs)}
+	\begin{figure}
+		\includegraphics[width=10cm]{../images/HRS_cartoon}
+	\end{figure}
+\end{frame}
+
+
+
+
+
 %-----------------------------------------------
+\subsection[Run Period]{Run Period}
 \begin{frame}
 \frametitle{The Run Period}
 \vspace{-20pt}
@@ -562,7 +529,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \frametitle{Kinematic Coverage}
 
 \begin{figure}[h]
-
+	\vspace*{-1.5cm}
 	\centering
 	\includegraphics[width=12.cm]{../images/Thesis/KinCov.pdf}
 	\caption*{Kinematic coverage between $Q^2$, $x$, and Theta. The band around the points represents the approximate spectrometer acceptance in the y axis.}
@@ -570,6 +537,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{figure}
 \end{frame}
 %------------------------------------------------------------------
+\section[Analysis]{Data Analysis}
 \subsection[Systematic Studies]{Systematic Studies}
 \begin{frame}
 \frametitle{Systematics: $^3H $ Decay}
@@ -667,45 +635,6 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{frame}
 
 
-\iffalse
-
-\begin{frame}{}
-\frametitle{d/p and $^3H/^3He$}
-\vspace{-10pt}
-\begin{columns}
-	\column{0.5\textwidth}
-	\begin{figure}
-		\includegraphics[width=6cm]{../images/MARA_F2.pdf}
-	\end{figure}
-	\column{0.5\textwidth}
-	\begin{figure}
-		\includegraphics[width=6cm]{../images/H_H.png}
-	\end{figure}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}{EMC Effect}
-\vspace{-20pt}
-	\begin{figure}
-		\includegraphics[width=11cm]{../images/EMC1.pdf}
-	\end{figure}
-\end{frame}
-\begin{frame}{EMC Effect}
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=11cm]{../images/EMC2.pdf}
-\end{figure}
-\end{frame}
-
-\begin{frame}{EMC Effect}
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=11cm]{../images/EMC.pdf}
-\end{figure}
-\end{frame}
-
-\fi
 
 \subsection[Extraction with Model]{Extraction with Model}
 \begin{frame}{Extracting F2 ratio}
@@ -1107,3 +1036,183 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 			
 			A booklet is available containing the Summary Tables and abbreviated versions of some of the other sections of this full  Review. All tables, listings, and reviews (and errata) are also available on the Particle Data Group website:  pdg.lbl.gov.}
 	}
+\iffalse
+%----------------------------------------------
+\begin{frame}
+%frametitle{DIS Cross Section}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+	\column{.5\textwidth} % Left column and width		
+	\begin{figure}[]
+		\centering
+		\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_2.png}
+		\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
+		\label{wspect}
+	\end{figure}
+	\column{.5\textwidth} % Left column and width
+	
+	$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
+	
+	\begin{figure}[]
+		\includegraphics[width=4cm]{../images/ele_draw.png}
+	\end{figure}
+	
+	
+	
+\end{columns}
+\end{frame}
+%----------------------------------------------
+\fi
+
+%First frame - just elastic
+
+\iffalse
+\begin{frame}
+%frametitle{DIS Cross Section}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.5\textwidth} % Left column and width		
+\begin{figure}[]
+	\centering
+	\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_1.png}
+	\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
+	
+\end{figure}
+
+$\bullet$ \textbf{\textcolor{blue}{Inelastic scattering}}\\
+
+\begin{figure}[]
+	\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}
+
+\column{.5\textwidth} % Left column and width
+
+$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
+
+\begin{figure}[]
+	\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}
+$\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
+
+\begin{figure}[]
+	\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}	
+
+
+\end{columns}
+\end{frame}
+
+%----------------------------------------------
+%----------------------------------------------
+
+\begin{frame}
+%frametitle{DIS Cross Section}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.5\textwidth} % Left column and width		
+\begin{figure}[]
+\centering
+\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_2.png}
+\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
+\label{wspect}
+\end{figure}
+
+$\bullet$ \textbf{\textcolor{blue}{Inelastic scattering}}\\
+
+\begin{figure}[]
+\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}
+
+\column{.5\textwidth} % Left column and width
+
+$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
+
+\begin{figure}[]
+\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}
+$\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
+
+\begin{figure}[]
+\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}	
+
+
+\end{columns}
+\end{frame}
+
+%----------------------------------------------
+
+%----------------------------------------------
+
+\begin{frame}
+%frametitle{DIS Cross Section}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.5\textwidth} % Left column and width		
+\begin{figure}[]
+\centering
+\includegraphics[width=5cm]{../images/Thesis/elasticspectrum_4.png}
+\caption*{e + p $\rightarrow$ $e^{\prime}$ \cite{deltaIsobar}.}
+\label{wspect}
+\end{figure}
+
+$\bullet$ \textbf{\textcolor{blue}{Inelastic scattering}}\\
+
+\begin{figure}[]
+\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}
+
+\column{.5\textwidth} % Left column and width
+
+$\bullet$ \textbf{\textcolor{red}{Elastic scattering}}\\
+
+\begin{figure}[]
+\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}
+$\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
+
+\begin{figure}[]
+\includegraphics[width=4cm]{../images/ele_draw.png}
+\end{figure}	
+
+
+\end{columns}
+\end{frame}
+\fi
+%----------------------------------------------
+
+\iffalse
+
+\begin{frame}{}
+\frametitle{d/p and $^3H/^3He$}
+\vspace{-10pt}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/MARA_F2.pdf}
+	\end{figure}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/H_H.png}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{EMC Effect}
+\vspace{-20pt}
+\begin{figure}
+\includegraphics[width=11cm]{../images/EMC1.pdf}
+\end{figure}
+\end{frame}
+\begin{frame}{EMC Effect}
+\vspace{-20pt}
+\begin{figure}
+\includegraphics[width=11cm]{../images/EMC2.pdf}
+\end{figure}
+\end{frame}
+
+\begin{frame}{EMC Effect}
+\vspace{-20pt}
+\begin{figure}
+\includegraphics[width=11cm]{../images/EMC.pdf}
+\end{figure}
+\end{frame}
+
+\fi
