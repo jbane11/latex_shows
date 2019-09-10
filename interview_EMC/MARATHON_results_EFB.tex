@@ -538,6 +538,51 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{frame}
 %------------------------------------------------------------------
 \section[Analysis]{Data Analysis}
+\subsection[Calibration]{Calibration}
+\begin{frame}
+\frametitle{Beam Position Monitor(BPM) Calibration}
+
+	\begin{columns}
+		\column{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=5.5cm]{../images/Thesis/harp.png}
+		\end{figure}
+
+		\column{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=3.5cm]{../images/Thesis/BPM.png}
+		\end{figure}		
+	\end{columns}	
+		\centering
+		\begin{equation}
+			
+			\begin{pmatrix}
+			X_{position}\\
+			Y_{position}
+			\end{pmatrix}
+			=
+			\begin{pmatrix}
+			C(0,0) & C(0,1)\\
+			C(0,0) & C(0,1)\\
+			\end{pmatrix}
+			*
+			\begin{pmatrix}
+			X_{BPM}\\
+			Y_{BPM}
+			\end{pmatrix}
+			+
+			\begin{pmatrix}
+			X_{offset}\\
+			Y_{offset}
+			\end{pmatrix}
+			\nonumber			 
+		\end{equation}
+		
+\end{frame}
+
+
+
+
 \subsection[Systematic Studies]{Systematic Studies}
 \begin{frame}
 \frametitle{Systematics: $^3H $ Decay}
