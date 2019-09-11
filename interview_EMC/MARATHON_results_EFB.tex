@@ -81,8 +81,9 @@
 \usepackage{graphicx} % Allows including images
 \usepackage{tikz}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
-\usepackage[font=small,skip=0pt]{caption}
+%\usepackage[font=small,skip=0pt]{caption}
 \usepackage{cancel}
+\usepackage[config, labelfont={bf}]{caption,subfig} % nice sub figures
 %\usepackage{enumitem}
 
 \newcommand\parallelcontent[2]{
@@ -230,12 +231,14 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 \end{figure}
 \column{.55\textwidth} % Left column and width
 \hspace{10pt}
-\begin{figure}
-\caption*{\label{E03103_1} EMC as a function of Nuclear Density. \cite{E3103}}
-\includegraphics[width =6cm]{../images/PRL_slopes}
-\end{figure}
-\centering
-Scaled by $\frac{\left(A-1\right)}{A}$
+\begin{itemize}
+		\item Studied for last 30+ years
+		\item CERN, SLAC, HERMES, BCDMS, and JLab
+		\item Slope of A/D Ratios from 0.3 - 0.7 in x
+		\item $\approx$ log dependence in A
+		\item Models have difficulty matching data for all criteria
+\end{itemize}
+
 \end{columns}
 \end{frame}
 
@@ -403,11 +406,11 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 
 \vspace{-10pt}
 \begin{columns}[c]
-	\column{.55\textwidth}
+	\column{.52\textwidth}
 		\begin{figure}
 			\includegraphics[width=5.5cm]{../images/cebaf.pdf}
 		\end{figure}
-	\column{.45\textwidth}
+	\column{0.48\textwidth}
 		\begin{block}{}
 			\begin{itemize}
 				\addtolength{\itemindent}{-1em}
@@ -415,7 +418,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 				\item 12 GeV for Hall D
 				\item Superconducting RF cavities
 				\item RF separators split the beam to each Hall
-				\item [] \textbf{MARATHON purposed to use:}
+				\item [] \hspace{-15pt}\textbf{MARATHON planned to use}
 				\item 11 GeV Beam	
 				\item 22.5 $\mu$A current
 				\item Hall A's spectrometers and Big Bite Spectrometer
@@ -449,15 +452,22 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 
 %----------------------------------------------
 \begin{frame}
-\begin{columns}
-\hspace*{-0.8cm}
-\column{0.45\textwidth}
 \centering 
 \textbf{The Big Bite Spectrometer}
+\begin{columns}
 
+\column{0.5\textwidth}
 \begin{figure}
-\hspace*{-1.2cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
+\hspace*{-1.4cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
 \end{figure}
+\begin{block}{}
+	\begin{itemize}
+		\item[] Large Acceptance Spectrometer
+		\item Solid angle = 96 mrad
+		\item Large Momentum Acceptance: $>$ 500 MeV/c
+	\end{itemize}
+\end{block}
+
 \hspace*{0.5cm}
 \column{0.5\textwidth}
 	\begin{block}{Preparing Big Bite}
@@ -540,6 +550,30 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \section[Analysis]{Data Analysis}
 \subsection[Calibration]{Calibration}
 \begin{frame}
+\textbf{Preparing Data for Analysis}
+\begin{columns}[]
+\column{0.45\textwidth}
+\begin{block}{Calibration}
+	\begin{itemize}
+		\item[] \textbf{ADC calibration}
+		\item Calorimeters, Scintillators, and Cherenkov
+		\item[] \textbf{TDC calibration}
+		\item Scintillators and VDC
+		\item[] \textbf{Detector calibrations} 
+		\item BPMs, BCMS, Optics 
+	\end{itemize}
+\end{block}
+\column{0.45\textwidth}
+\begin{figure}
+	\vspace*{-0.25cm}
+	\includegraphics[width=5cm,height=6.5cm]{../images/gc_calib.png}
+\end{figure}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
 \frametitle{Beam Position Monitor(BPM) Calibration}
 
 	\begin{columns}
@@ -583,40 +617,92 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 		
 \end{frame}
 
-
-
-
-\subsection[Systematic Studies]{Systematic Studies}
 \begin{frame}
-\frametitle{Systematics: $^3H $ Decay}
-	\begin{block}{$^3H \rightarrow ^3He$}
-		\begin{columns}
+\centering \textbf{Beam position from BPM and harp for a collection of runs}
+\vspace*{-1cm}
+\begin{columns}
+	\column{0.5\textwidth}
+\begin{figure}
+	\includegraphics[width=6cm]{../images/BPM_before.png}
+\end{figure}
+\vspace*{-0.5cm}
+\centering \textbf{Before Calibration} 
+	\column{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{../images/BPM_after.png}
+\end{figure}
+\vspace*{-0.5cm}
+\centering \textbf{After Calibration}
+\end{columns}
+\end{frame}
+
+\subsection[Cross section]{Extracting Cross section}
+
+\begin{frame}
+	\begin{block}{Experimentally Measured Cross Section}
+		\begin{columns}[c]
+		\column{0.45\textwidth}
+		\begin{equation}
+			\dfrac{d\sigma}{dE^{\prime}d\Omega} = \frac{(N - BG)}{L \cdot \epsilon \cdot \Delta E^{\prime} \Delta \Omega \cdot A(E^{\prime},\theta)} \nonumber
+		\end{equation}		
+		\column{0.45\textwidth}
+		\vspace*{-1.5cm}
+		\begin{figure}
+			\includegraphics[width=2.5cm]{../images/ballsinbucket.png}
+		\end{figure}
+	\end{columns}
+		\begin{itemize}
+			\begin{columns}
 			\column{0.45\textwidth}
-			\begin{equation*}
-			 	\tau(^3H) = 4500 \pm 8 days
-			 \end{equation*}		 	
-			 \\
-			 \begin{equation*}
-			 	c = \frac{\eta_{^3He}} {\eta_{tot}}
-			 \end{equation*}
-			 \\
- 			 \begin{equation*}
-				 \sigma_{^3H} = \big(\frac{\sigma_{tot}}{\sigma_{^3He}}\big) \big(\frac{1}{1-c}\big) -  \big(\frac{1}{1-c}\big)  
-			 \end{equation*}
-			 \column{0.55\textwidth}
-		 	\begin{figure}
-		 		\caption*{Beta Decay Helium Fraction}
-			 	\includegraphics[width=6cm]{../images/beta_decay.png}
-			 \end{figure}
-		\end{columns}
+			\item N = Number of electrons
+			\item BG = Background
+			\item L = Luminosity 
+			\column{0.45\textwidth}
+			\item $\epsilon$ = Efficiency
+			\item $\Delta E^{\prime} \Delta \Omega$= Bin Size
+			\item $A(E^{\prime},\theta)$ = Acceptance probability 
+			\end{columns}
+		\end{itemize}
 	\end{block}
+
 \end{frame}
 
 
-
+\subsection[Systematic Studies]{Systematic Studies}
 %------------------------------------------------------------------
+
+\begin{frame}{Charge Symmetric Background}
+\vspace{-0pt}
+
+\begin{columns}
+	\column{0.55\textwidth}
+	\vspace*{-0.75cm}
+	\begin{itemize}
+		\item $\gamma$ decay into an e$^+$e$^-$ pairs
+		\item  Pair produced $^-$ by detecting e$^+$
+		\item Extraction based on fit to Exponential function 
+	\end{itemize}
+	\column{0.45\textwidth}
+	\vspace{-40pt}
+	\begin{figure}
+		\textbf{Pair Production}
+		\includegraphics[width=3.0cm]{../images/pp_FD.png}
+	\end{figure}
+\end{columns}
+
+
+\begin{figure}
+	\caption*{Tritium positron contamination. Credit: Tong Su}
+	\includegraphics[width=8.0cm]{../images/positron_H3_bane.pdf}
+\end{figure}
+
+
+
+
+\end{frame}
+
 \begin{frame}
-\frametitle{Systematics: Endcaps}
+\frametitle{Aluminum Endcap Background}
 	\vspace{-15pt}
 \begin{block}{}
 	\begin{figure}
@@ -631,138 +717,196 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{frame}
 %------------------------------------------------------------------em_tgt_comp.png
 
-\begin{frame}{Systematics: Density Fluctuations}
-	\vspace{-25pt}
+\begin{frame}
+\frametitle{$^3H $ Decay}
+\begin{block}{$^3H \rightarrow ^3He$}
+	\begin{columns}
+		\column{0.45\textwidth}
+		\begin{equation*}
+		\tau(^3H) = 4500 \pm 8 days
+		\end{equation*}		 	
+		\\
+		\begin{equation*}
+		c = \frac{\eta_{^3He}} {\eta_{tot}}
+		\end{equation*}
+		\\
+		\begin{equation*}
+		\sigma_{^3H} = \big(\frac{\sigma_{tot}}{\sigma_{^3He}}\big) \big(\frac{1}{1-c}\big) -  \big(\frac{1}{1-c}\big)  
+		\end{equation*}
+		\column{0.55\textwidth}
+		\begin{figure}
+			\caption*{Beta Decay Helium Fraction}
+			\includegraphics[width=6cm]{../images/beta_decay.png}
+		\end{figure}
+	\end{columns}
+\end{block}
+\end{frame}
+
+
+
+%------------------------------------------------------------------
+
+
+\begin{frame}{Density Fluctuations}
+	\vspace{-17pt}
 	\begin{figure}
-		\includegraphics[width=10cm,height=8.0cm]{../images/density_cor.pdf}
+		\includegraphics[width=10cm,height=7.50cm]{../images/density_cor.pdf}
 		\vspace{-0.5cm}
 		\caption*{\cite{denscor}}
 	\end{figure}
 
 \end{frame}
-%------------------------------------------------------------------
 
-\begin{frame}{Charge Symmetric back ground}
-\vspace{-0pt}
-
-	\begin{columns}
-		\column{0.55\textwidth}
-		\vspace*{-0.75cm}
-		\begin{itemize}
-			\item $\gamma$ decay into an e$^+$e$^-$ pairs
-			\item  Pair produced $^-$ by detecting e$^+$
-			\item Extraction based on fit to Exponential function 
-		\end{itemize}
-		\column{0.45\textwidth}
-		\vspace{-40pt}
-		\begin{figure}
-			\textbf{Pair Production}
-			\includegraphics[width=3.0cm]{../images/pp_FD.png}
-		\end{figure}
-	\end{columns}
-	
-
-	\begin{figure}
-			\caption*{Tritium positron contamination. Credit: Tong Su}
-			\includegraphics[width=8.0cm]{../images/positron_H3_bane.pdf}
-	\end{figure}
-		
-
-	
-
-\end{frame}
-%------------------------------------------------------------------
-\subsection[Results]{Results}
-
-
-\begin{frame}{Ratio of Yields}
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=11cm]{../images/MARA_rations.pdf}
-\end{figure}
-\end{frame}
-
-
-
-\subsection[Extraction with Model]{Extraction with Model}
-\begin{frame}{Extracting F2 ratio}
-
-\begin{figure}
-	\includegraphics[width=10cm]{../images/f2ext.png}
-\end{figure}
-\end{frame}
-
-\begin{frame}{Extracting F2 ratio}
-\vspace{-10pt}
-\begin{figure}
-	\includegraphics[width=10cm]{../images/kp_cj.png}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}{$\frac{F_2^n}{F_2^p}$ for D/p and $^3$H/$^3$He}
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=9.5cm]{../images/MARA_F2_1.pdf}
-\end{figure}
-\end{frame}
-
-\begin{frame}{$\frac{F_2^n}{F_2^p}$}
-\vspace{-20pt}
-\begin{figure}
-	\includegraphics[width=9.5cm]{../images/MARA_F2.pdf}
-\end{figure}
-\end{frame}
-
-
-
-\begin{frame}{EMC Effect}
-\vspace*{-20pt}
-\begin{columns}
-	\hspace*{-30pt}
-	\column{0.45\textwidth}
-	\begin{figure}
-		\includegraphics[width=6.35cm]{../images/He3_EMC_MARA.pdf}
-	\end{figure}
-	\column{0.45\textwidth}
-	\begin{figure}
-		\includegraphics[width=6.35cm]{../images/H3_EMC_MARA.pdf}
-	\end{figure}
-\end{columns}
-\begin{itemize}
-	\item $^3H$ normalized by -0.4\%
-	\item $^3He$ normalized by 2.4\%
-	\item Isoscalar corrections from MARATHON F$_n$(n/p)
-\end{itemize}
-
-\end{frame}
-
-%------------------------------------------------------------------
-\subsection[The End]{The End}
 \begin{frame}
-\begin{block}{Thank you!!}
-	\begin{itemize}
-		\item MARATHON students
-		\item Tritium collaboration
-		\item Hall A Collaboration
-		\item Nadia Fomin and Doug Higinbotham
-		\item DOE and JSA
-	\end{itemize}
+\begin{block}{Efficiencies ($\epsilon$)}
+		\begin{itemize}
+		\item Particle Identification(PID) 
+		\begin{itemize}
+			\item Cherenkov
+			\item Calorimeters
+		\end{itemize}
+		\item Trigger
+		\begin{itemize}
+			\item Scintillators
+		\end{itemize}
+		\item Tracking
+		\begin{itemize}
+			\item Vertical Drift Chambers(VDCs)
+		\end{itemize}
+	\end{itemize}	
 \end{block}
 \end{frame}
 
-%----------------------------------------------
+\begin{frame}{}
+\frametitle{Particle ID Efficiency}
+\begin{columns}
+		\column{0.65\textwidth}
+	\begin{figure}[t]%
+		\includegraphics[width=8cm]{../images/Thesis/PID_2d}
+	\end{figure}
+	\column{0.35\textwidth}
+	\begin{itemize}
+		\item Use well defined samples
+		\item Apply PID cuts and count
+		\item PID efficiency $\approx 98\%$  for all kinematics 
+	\end{itemize}
+
+\end{columns}	
+\end{frame}
+
 \begin{frame}
-\frametitle{The JLab MARATHON Tritium Collaboration}
-\vspace{-15pt}
+	\begin{block}{Monte Carlo Ratio Method}
+	\begin{align}
+		Y_{MC}(E^{\prime},\theta) &= L \cdot \sigma^{model} \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) \nonumber\\
+		\sigma_{data} &= \frac{Y_{data}(E^{\prime},\theta)}{ L \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) }\nonumber
+	\end{align}
+	Use a Monte Carlo simulation  \\
+	$\bullet$ $(\Delta E^{\prime} \Delta \Omega)_{Data}$ =$(\Delta E^{\prime} \Delta \Omega)_{MC}$\\
+	$\bullet$ $A(E^{\prime},\theta)_{Data} = A(E^{\prime},\theta)_{MC}$
+	\begin{equation}
+		\sigma_{Data} = \sigma_{model} \cdot \frac{Y_{Data}}{Y_{MC}}\nonumber
+	\end{equation} 
+	\end{block}
+\end{frame}
+
+
+
+%------------------------------------------------------------------
+\begin{frame}{}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{block}{Monte Carlo}
+		\begin{itemize}
+			\item Generate events $\rightarrow$ Pass through Magnetic apertures
+			\item Tune Simulation offsets to match detector response
+			\item Use model to weight events
+			\begin{itemize}
+				\item Deep Inelastic and resonance region from Ari Bodek Fit from E139 \cite{bodek}
+			\end{itemize}    
+		\end{itemize}
+	\end{block}
+	\column{0.45\textwidth}
+	\vspace{-20pt}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/dp_ytar_1207.png}
+	\end{figure}
+	\vspace{-30pt}
+	\begin{figure}
+		\includegraphics[width=6cm]{../images/xp_yp_foc_1207.png}
+	\end{figure}
+\end{columns}
+\end{frame}
+
+
+
+\subsection[Results]{Results}
+
+\begin{frame}{}
+\frametitle{DIS Cross Section}
 
 \begin{figure}
-	\includegraphics[width =11.5cm]{../images/collabos_ppl.png}
+	\includegraphics[width=10cm]{../images/total_xs.pdf}
+\end{figure}
+\end{frame}
+%----------------------------------------------
+\begin{frame}{}
+\frametitle{Error Contributions for Cross Section}
+
+\end{frame}
+%----------------------------------------------
+\begin{frame}{}
+\frametitle{Cross Section Ratio}
+\begin{figure}
+	\includegraphics[width=10cm]{../images/EMC.pdf}
 \end{figure}
 
 \end{frame}
 %----------------------------------------------
+\begin{frame}{}
+\frametitle{Isoscalar Corrections}
+\vspace*{-1cm}
+\begin{columns}
+	\column{0.5\textwidth}
+	\begin{figure}
+		\includegraphics[width =5cm]{../images/mirror}
+	\end{figure}
+	\column{0.5\textwidth}
+	$\bullet$ Correct for the unequal number of nucleons in the A/D ratio.	
+\end{columns}
+
+
+
+\end{frame}
+
 %----------------------------------------------
+\begin{frame}{}
+\frametitle{Isoscalar Corrections}
+\vspace*{-1cm}
+\begin{columns}
+	\column{0.5\textwidth}
+\begin{figure}
+	\includegraphics[width =5cm]{../images/mirror}
+\end{figure}
+	\column{0.5\textwidth}
+$\bullet$ Correct for the unequal number of nucleons in the A/D ratio.	
+\end{columns}
+
+\begin{figure}
+	\includegraphics[width =10cm]{../images/IsoCor.pdf}
+\end{figure}
+
+\end{frame}
+%----------------------------------------------
+\begin{frame}{}
+\frametitle{EMC Effect}
+\begin{figure}
+	\includegraphics[width=10cm]{../images/EMCIsotwo.pdf}
+\end{figure}
+
+
+\end{frame}
+%----------------------------------------------
+
 \begin{frame}
 \frametitle{The JLab MARATHON Tritium Collaboration}
 \vspace{-15pt}
