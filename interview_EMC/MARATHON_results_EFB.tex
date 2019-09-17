@@ -83,6 +83,9 @@
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 %\usepackage[font=small,skip=0pt]{caption}
 \usepackage{cancel}
+\usepackage{xcolor}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+
 \usepackage[config, labelfont={bf}]{caption,subfig} % nice sub figures
 %\usepackage{enumitem}
 
@@ -212,9 +215,11 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 	\centering
 	\textbf{ European Muon Collaboration}
 	\begin{itemize}
+		\item \small$X$ = fraction of momentum carried by quark	
 		\item Expected Unity $\rightarrow$ Binding $<$ interaction
 		\item F$^A$ = $Z \cdot F^p + (A-Z)\cdot F^n$  
 		\item Unexpected Relative Decrease
+		\item Missing high-momentum quarks in A$>$2
 		\item EMC Effect $\equiv$ structure of the A/D Ratio
 	\end{itemize}
 	
@@ -250,14 +255,37 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 		\item Studied for last 30+ years
 		\item CERN, SLAC, HERMES, BCDMS, and JLab
 		\item Slope of A/D Ratios from 0.3 - 0.7 in x
-		\item $\approx$ log dependence in A
 		\item Models have difficulty matching data for all criteria
+		\item $\approx$ log dependence in A
+
 \end{itemize}
 
 \end{columns}
 \end{frame}
 
+\begin{frame}{EMC Effect}
+\begin{columns}
+	\column{.5\textwidth} % Left column and width
+	\vspace{-20pt}
+	\begin{figure}
+		\caption*{JLab experiment E03103 \cite{E3103} }
+		\vspace{10pt}
+		\includegraphics[width =6cm]{../images/Thesis/EMC_rho.pdf}
+	\end{figure}
+	\column{.55\textwidth} % Left column and width
+	\hspace{10pt}
+	\begin{itemize}
+		\item Studied for last 30+ years
+		\item CERN, SLAC, HERMES, BCDMS, and JLab
+		\item Slope of A/D Ratios from 0.3 - 0.7 in x
+		\item Models have difficulty matching data for all criteria
+		\item \leavevmode\Ccancel[red]{$\approx$ log dependence in A}
+		\item sensitivity to "local" effects
 
+	\end{itemize}
+	
+\end{columns}
+\end{frame}
 
 
 %----------------------------------------------
@@ -273,8 +301,8 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 	\column{.55\textwidth} % Right column and width
 	\begin{itemize}
 		\item $ Q^2 \equiv 4EE' sin^2 \frac{\theta}{2} $
-		\item $\nu$ or $\omega$ $\equiv$ E-E$^{\prime}$
 		\item $X_{Bj}= \frac{Q^2}{2\nu M}$
+		\item $\nu$ or $\omega$ $\equiv$ E-E$^{\prime}$
 		\item  $W^2 = 2M\nu + M^2 - Q^2$
 		\item $W^2 >$ $M^2$ $\rightarrow$ Inelastic Scattering  
 	\end{itemize}
@@ -467,7 +495,37 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{frame}
 
 %----------------------------------------------
+\begin{frame}
+\centering 
+\textbf{Hardware Experience}
+\begin{columns}
+	
+	\column{0.5\textwidth}
+	\begin{figure}
+		\hspace*{-1.4cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
+	\end{figure}
+	\begin{block}{}
+		\begin{itemize}
+			\item[] Large Acceptance Spectrometer
+			\item Solid angle = 96 mrad
+			\item Large Momentum Acceptance: $>$ 500 MeV/c
+		\end{itemize}
+	\end{block}
+	
+	\hspace*{0.5cm}
+	\column{0.5\textwidth}
+	\begin{block}{Preparing Bigbite}
+		\begin{itemize}
+			\item Refurbishing signal electronics and cables
+			\item Testing then repairing or replacing PMTs
+			\item Building front end electronics and coincidence trigger logic
+			\item Testing High voltage power sources and providing power to the detectors
+		\end{itemize}
+	\end{block}
+\end{columns}
+\end{frame}
 
+%----------------------------------------------
 \begin{frame}
 \frametitle{Hall A}
 \begin{figure}
@@ -797,9 +855,10 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 			\item Tune Simulation offsets to match detector response
 			\item Use model to weight events
 			\begin{itemize}
-				\item Deep Inelastic and resonance region from Ari Bodek Fit from E139 \cite{bodek}
-			\end{itemize}    
+				\item Deep Inelastic and resonance region from Ari Bodek Fit from E139 
+			\end{itemize}
 		\end{itemize}
+		\cite{bodek}  
 	\end{block}
 	\column{0.45\textwidth}
 	\vspace{-20pt}
@@ -898,53 +957,50 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 \begin{figure}
 	\includegraphics[width=10cm]{../images/EMCIsotwo.pdf}
 \end{figure}
-
-
 \end{frame}
-%----------------------------------------------
+
 
 \begin{frame}{}
 \begin{block}{Future Plans}
 	\begin{itemize}
 		\item Model dependence on cross section extraction
-		\item Study the edge of the HRS acceptance 
+		\item Study the edge of the HRS acceptance for a long target 
 		\item Model Dependence on Isoscalar correction
-		\item Determine EMC effect for Tritium and Helium-3
+		\item Determine the magnitude of the EMC effect for Tritium and Helium-3
 	\end{itemize}
 \end{block}
+
+\begin{figure}
+	\includegraphics[width =5cm]{../images/puzzels.jpg}
+\end{figure}
+
 \end{frame}
 
-\begin{frame}
-\centering 
-\textbf{Hardware Experience}
-\begin{columns}
-	
-	\column{0.5\textwidth}
-	\begin{figure}
-		\hspace*{-1.4cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
-	\end{figure}
-	\begin{block}{}
-		\begin{itemize}
-			\item[] Large Acceptance Spectrometer
-			\item Solid angle = 96 mrad
-			\item Large Momentum Acceptance: $>$ 500 MeV/c
-		\end{itemize}
-	\end{block}
-	
-	\hspace*{0.5cm}
-	\column{0.5\textwidth}
-	\begin{block}{Preparing Big Bite}
-		\begin{itemize}
-			\item Refurbishing signal electronics and cables
-			\item Testing then repairing or replacing PMTs
-			\item Building front end electronics and coincidence trigger logic
-			\item Testing High voltage power sources and providing power to the detectors
-		\end{itemize}
-	\end{block}
-\end{columns}
-\end{frame}
 
 %----------------------------------------------
+\section{Future Experiments}
+\begin{frame}{}
+
+\small{\textbf{Detailed Studies of the nuclear dependence of F2 in light nuclei 
+	[E12-100-008: J. Arrington, A Daniel, NF, D. Gaskell]}}
+\begin{figure}
+	\includegraphics[width=10cm]{../images/moreEMC.png}
+	\caption*{Slide credit Nadia Fomin}
+\end{figure}
+\end{frame}
+%----------------------------------------------
+\begin{frame}{}
+
+\centering \textbf{The EMC effect in spin structure functions}
+\begin{figure}
+	\includegraphics[width=10cm]{../images/moreEMC1.png}
+	\caption*{Slide credit Nadia Fomin}
+\end{figure}
+
+\end{frame}
+%----------------------------------------------
+
+
 \begin{frame}
 \frametitle{The JLab MARATHON Tritium Collaboration}
 \vspace{-15pt}
@@ -967,6 +1023,16 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 %----------------------------------------------
 
 \begin{frame}{}
+\begin{block}{Summary}
+	\begin{itemize}
+		\item The puzzling EMC Effect - decrease in high momentum quarks
+		\item DIS - probe the quarks 
+		\item DOE and JSA 
+		\item Rex Tayloe for the invite.
+	\end{itemize}
+\end{block}
+
+
 \begin{block}{Special Thanks}
 	\begin{itemize}
 		\item Nadia Fomin and Douglas Higinbotham
@@ -1004,7 +1070,7 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 		\bibitem[S.N.Santiestebana et. al (2019)]{denscor} S.N.Santiestebana et. al 
 		\newblock 	\emph{Nucl. Instrum. Meth.} A 940 (2019) 351-358
 \vspace*{-8pt}				
-		\bibitem[J.Seely, A. Daniel et al, 2013]{E3103} J.Seely, A. Daniel et al  
+		\bibitem[J.Seely, A. Daniel et al, 2009]{E3103} J.Seely, A. Daniel et al  
 		\newblock \emph{Phys.\ Rev.\ Lett.\   103, 202301 (2009)}.
 \vspace*{-8pt}				
 		\bibitem[Povh, 1995]{PnN} Bogdan Povh,
