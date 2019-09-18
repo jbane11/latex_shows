@@ -106,7 +106,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 %\logo{\includegraphics[width=0.05\textwidth]{../images/utlogo}}
-\title[EMC A=3]{The EMC Effect for Tritium and Helium-3 from MARATHON} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[EMC A=3]{The EMC Effect for Tritium and Helium-3 from JLab's MARATHON Experiment using DIS.} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Jason Bane} % Your name
 \institute[UTK] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -131,72 +131,182 @@ University of Tennessee \\ % Your institution for the title page
 
 
 \begin{frame}{Outline}
-
+\large{
 \begin{itemize}
-	\item Introduction
-	\begin{itemize}
-		\item MARATHON
-		\item EMC
-		\item Deep Inelastic Scattering
-	\end{itemize}
+	\item Deep Inelastic Scattering
+	\item The EMC Effect
 	\item The MARATHON Experiment
 	\item Data Analysis
 	\item EMC Effect of A=3
 \end{itemize} 
-
+}
 
 
  % Table of contents slide, comment this block out to remove it
 	%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
 \end{frame}
 
+
 %----------------------------------------------------------------------------------------
 %	PRESENTATION SLIDES
 %----------------------------------------------------------------------------------------
 
 
-\section[MARATHON]{MARATHON Introduction}
-\subsection[Introduction]{Introduction}
+\section[DIS]{Deep Inelastic Scattering}
+\begin{frame}
+\frametitle{Deep Inelastic Scattering (DIS)}
+\vspace*{-20pt}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+	\column{.45\textwidth} % Left column and width
+	\begin{figure}
+		\includegraphics[width =5cm]{../images/DIS_toon.png}
+	\end{figure}
+	\column{.55\textwidth} % Right column and width
+	\begin{itemize}
+		\item $ Q^2 \equiv 4EE' sin^2 \frac{\theta}{2} $
+		\item $X_{Bj}= \frac{Q^2}{2\nu M}$
+		\item $\nu$ $\equiv$ E-E$^{\prime}$
+		\item  $W^2 = 2M\nu + M^2 - Q^2$
+		\item $W^2 >$ 4 $\rightarrow$ DIS 
+	\end{itemize}
+\end{columns}
+\vspace*{10pt}
+	
+\end{frame}
+
+\begin{frame}
+%frametitle{DIS Cross Section}
+\begin{block}{DIS ??????}
+\begin{figure}[]
+	\centering
+	%	\textbf{Electron - Nucleus Scattering   }\par\medskip
+	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect.pdf}
+	\vspace{20pt}
+	\caption*{ Idealized spectra of high-energy electron scattering as a function of energy transfer \cite{spectrum}.}
+	
+\end{figure}
+
+\end{block}
+\end{frame}
+
+
 %----------------------------------------------
 
 \begin{frame}
-\frametitle{Tritium Experiments}
-\vspace*{-25pt}
-\begin{figure}
-	\includegraphics[width =12cm]{../images/tritium_ov}
+%frametitle{DIS Cross Section}
+
+\begin{figure}[]
+\centering
+\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_Elas.png}
 \end{figure}
-\end{frame}
-%----------------------------------------------
-\begin{frame}
-\frametitle{MARATHON}
-\vspace{-10pt}
-\begin{block}{}
-MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic Electron Scattering off the Tritium and Helium MirrOr Nuclei.
-\vspace{-10pt}
-\begin{columns}[t]
-	
-	\column{.35\textwidth} % L column and width
-	\vspace{-10pt}	
-	\hspace{-10pt}
-	\begin{figure}
-		\includegraphics[width =5cm]{../images/mirror}
-	\end{figure}
-	
-	\column{.65\textwidth} % Right column and width
-	\vspace{10pt}
-	\begin{itemize}
-		\item Lightest and simplest mirror system
-		\begin{itemize}
-			\item  Number of protons in $^3H =$ neutrons in $^3He$
-		\end{itemize}
-		\item Differences in the nuclear effects are small
-	%	\item Improve the current measurement and understanding of $F^n_2/F^p_2$ ratio
-	%	\item Restrict the assumptions and parameters made in the model calculations of the down to up quark distribution ratio
-	\end{itemize}
-	
-	
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.34\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
+\vspace{-30pt}
+\begin{figure}[]
+\includegraphics[height=3.5cm]{../images/elast_draw.png}
+\end{figure}
+
+\column{.34\textwidth} % Left column and width
+
+\column{.34\textwidth} % Left column and width
+
+
+
 \end{columns}
-\end{block}
+\end{frame}
+
+%----------------------------------------------
+%----------------------------------------------
+
+\begin{frame}
+%frametitle{DIS Cross Section}
+
+\begin{figure}[]
+\centering
+\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_QE.png}
+\end{figure}
+\vspace*{-0.5cm}
+\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.34\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
+\begin{figure}[]
+\includegraphics[width=3.5cm]{../images/elast_draw.png}
+\end{figure}
+\column{.36\textwidth} % Left column and width
+%	\vspace{5pt}
+$\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}\\
+\vspace{-20pt}
+\begin{figure}[]
+\includegraphics[width=3.5cm]{../images/quais_draw.png}
+\end{figure}
+\column{.3\textwidth} % Left column and width
+
+
+\end{columns}
+\end{frame}
+
+%----------------------------------------------
+%----------------------------------------------
+
+\begin{frame}
+%frametitle{DIS Cross Section}
+
+\begin{figure}[]
+\centering
+\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_DIS.png}
+\end{figure}
+\begin{columns}[t]
+\column{.3\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}
+\begin{figure}[]
+\includegraphics[width=3.5cm]{../images/elast_draw.png}
+\end{figure}
+\column{.3\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}
+\vspace{-10pt}
+\begin{figure}[]
+\includegraphics[width=3.5cm]{../images/quais_draw.png}
+\end{figure}
+\column{.38\textwidth} % Left column and width
+$\bullet$ \textbf{\textcolor{blue}{DIS}}
+\vspace{8pt}
+\begin{figure}[]
+\includegraphics[width=3.5cm]{../images/dis_draw.png}
+\end{figure}
+
+\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Why DIS?}
+\vspace*{-15pt}
+\centering
+\large	$\sigma_{eN} = \frac{\alpha^2}{4E^2sin^4(\frac{\theta}{2})} [\frac{F_2(x)}{\nu}cos^2\left(\frac{\theta}{2}\right) + \frac{2F_1(x)}{M}sin^2\left(\frac{\theta}{2}\right)] $
+
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+\column{.5\textwidth} % Left column and width	
+	\textbf{Quark parton model}\\
+\begin{itemize}
+	\item $F_2(x) = x \cdot$ $\sum_{i}$ $z_i^2f_i(x) $
+	\item $F_1(x) = 1/2 \cdot$ $\sum_{i}$ $z_i^2f_i(x)$
+	\item  \textbf{Spin 1/2 quarks} $F_2(x) = F_1(x) \cdot2x$
+\end{itemize}
+
+
+
+\column{.5\textwidth} % Left column and width
+\vspace*{-5pt}
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=4.5cm]{../images/Thesis/f1_f2_spin.pdf} 
+	\caption*{Ratio of $2x\cdot F_1(x)$ and $F_2(x)$ vs. $x$. \cite{PnN}}
+	
+\end{figure}  
+\end{columns}
 \end{frame}
 
 %----------------------------------------------------
@@ -281,164 +391,75 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 		\item Models have difficulty matching data for all criteria
 		\item \leavevmode\Ccancel[red]{$\approx$ log dependence in A}
 		\item sensitivity to "local" effects
-
-	\end{itemize}
-	
-\end{columns}
-\end{frame}
-
-
-%----------------------------------------------
-\section[DIS]{Deep Inelastic Scattering}
-\begin{frame}
-\frametitle{Deep Inelastic Scattering (DIS)}
-\vspace*{-20pt}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.45\textwidth} % Left column and width
-	\begin{figure}
-		\includegraphics[width =5cm]{../images/DIS.pdf}
-	\end{figure}
-	\column{.55\textwidth} % Right column and width
-	\begin{itemize}
-		\item $ Q^2 \equiv 4EE' sin^2 \frac{\theta}{2} $
-		\item $X_{Bj}= \frac{Q^2}{2\nu M}$
-		\item $\nu$ or $\omega$ $\equiv$ E-E$^{\prime}$
-		\item  $W^2 = 2M\nu + M^2 - Q^2$
-		\item $W^2 >$ $M^2$ $\rightarrow$ Inelastic Scattering  
 	\end{itemize}
 \end{columns}
-	\vspace*{10pt}
-	\centering
-	\Large	$\sigma_{eN} = \frac{\alpha^2}{4E^2sin^4(\frac{\theta}{2})} [\frac{F_2(Q^2,\nu)}{\nu}cos^2\left(\frac{\theta}{2}\right) + \frac{2F_1(Q^2,\nu)}{M}sin^2\left(\frac{\theta}{2}\right)] $	
 \end{frame}
 
-\begin{frame}
-%frametitle{DIS Cross Section}
-\begin{block}{DIS ??????}
-	\begin{figure}[]
-		\centering
-	%	\textbf{Electron - Nucleus Scattering   }\par\medskip
-		\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect.pdf}
-		\vspace{20pt}
-		\caption*{ \cite{spectrum}.}
-		
-	\end{figure}
-
-\end{block}
-\end{frame}
-
-
-%----------------------------------------------
-
-\begin{frame}
-%frametitle{DIS Cross Section}
-
-\begin{figure}[]
-	\centering
-	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_Elas.png}
-\end{figure}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.34\textwidth} % Left column and width
-	$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
-	\vspace{-30pt}
-	\begin{figure}[]
-		\includegraphics[height=3.5cm]{../images/elast_draw.png}
-	\end{figure}
-	
-	\column{.34\textwidth} % Left column and width
-	
-	\column{.34\textwidth} % Left column and width
-	
-	
-	
-\end{columns}
-\end{frame}
-
-%----------------------------------------------
-%----------------------------------------------
-
-\begin{frame}
-%frametitle{DIS Cross Section}
-
-\begin{figure}[]
-	\centering
-	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_QE.png}
-\end{figure}
-\vspace*{-0.5cm}
-\begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.34\textwidth} % Left column and width
-	$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
-	\begin{figure}[]
-		\includegraphics[width=3.5cm]{../images/elast_draw.png}
-	\end{figure}
-	\column{.36\textwidth} % Left column and width
-%	\vspace{5pt}
-	$\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}\\
-	\vspace{-20pt}
-	\begin{figure}[]
-		\includegraphics[width=3.5cm]{../images/quais_draw.png}
-	\end{figure}
-	\column{.3\textwidth} % Left column and width
-
-		
-\end{columns}
-\end{frame}
-
-%----------------------------------------------
-%----------------------------------------------
-
-\begin{frame}
-%frametitle{DIS Cross Section}
-
-\begin{figure}[]
-	\centering
-	\includegraphics[width=12cm]{../images/Thesis/E_nucleus_spect_DIS.png}
-\end{figure}
-\begin{columns}[t]
-	\column{.3\textwidth} % Left column and width
-$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}
-\begin{figure}[]
-	\includegraphics[width=3.5cm]{../images/elast_draw.png}
-\end{figure}
-\column{.3\textwidth} % Left column and width
-$\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}
-	\vspace{-10pt}
-\begin{figure}[]
-	\includegraphics[width=3.5cm]{../images/quais_draw.png}
-\end{figure}
-\column{.38\textwidth} % Left column and width
-$\bullet$ \textbf{\textcolor{blue}{DIS}}
-\vspace{8pt}
-\begin{figure}[]
-	\includegraphics[width=3.5cm]{../images/dis_draw.png}
-\end{figure}
-	
-\end{columns}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Why DIS?}
-\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-	\column{.5\textwidth} % Left column and width	
-			\vspace*{-30pt}
-	\begin{figure}[t]
-	\centering
-	\includegraphics[width=5cm]{../images/Thesis/f1_f2_spin.pdf} 
-	\caption*{Ratio of $2x\cdot F_1(x)$ and $F_2(x)$ vs. $x$. \cite{PnN}}
-	
-\end{figure} 
-
-
+\begin{frame}{EMC Effect}
+\begin{columns}
 	\column{.5\textwidth} % Left column and width
-\begin{figure}[t]
-	\vspace*{-30pt}
-	\centering
-	\includegraphics[width=5cm]{../images/Thesis/SLAC_F2.png} 
-	\caption*{ Proton structure function $F_2(x, Q^2)$ for different $x$ settings. \cite{Rev_PP}}
-	
-\end{figure} 
+	\vspace{-20pt}
+	\begin{figure}
+		\vspace{10pt}
+		\includegraphics[width =6cm]{../images/puzzels.jpg}
+	\end{figure}
+	\column{.55\textwidth} % Left column and width
+	\hspace{10pt}
+	\begin{itemize}
+		\item Studied for last 30+ years
+		\item CERN, SLAC, HERMES, BCDMS, and JLab
+		\item Slope of A/D Ratios from 0.3 - 0.7 in x
+		\item Models have difficulty matching data for all criteria
+		\item \leavevmode\Ccancel[red]{$\approx$ log dependence in A}
+		\item sensitivity to "local" effects
+	\end{itemize}
 \end{columns}
+\end{frame}
+
+
+\section[MARATHON]{MARATHON Introduction}
+\subsection[Introduction]{Introduction}
+%----------------------------------------------
+\iffalse
+\begin{frame}
+\frametitle{Tritium Experiments}
+\vspace*{-25pt}
+\begin{figure}
+	\includegraphics[width =12cm]{../images/tritium_ov}
+\end{figure}
+\end{frame}
+\fi
+%----------------------------------------------
+\begin{frame}
+\frametitle{MARATHON}
+\vspace{-10pt}
+\begin{block}{}
+MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic Electron Scattering off the Tritium and Helium MirrOr Nuclei.
+\vspace{-10pt}
+\begin{columns}[t]
+	
+	\column{.35\textwidth} % L column and width
+	\vspace{-10pt}	
+	\hspace{-10pt}
+	\begin{figure}
+		\includegraphics[width =5cm]{../images/mirror}
+	\end{figure}
+	
+	\column{.65\textwidth} % Right column and width
+	\vspace{10pt}
+	\begin{itemize}
+		\item Lightest and simplest mirror system
+		\begin{itemize}
+			\item  Number of protons in $^3H =$ neutrons in $^3He$
+		\end{itemize}
+		\item Differences in the nuclear effects are small
+		%	\item Improve the current measurement and understanding of $F^n_2/F^p_2$ ratio
+		%	\item Restrict the assumptions and parameters made in the model calculations of the down to up quark distribution ratio
+	\end{itemize}
+	
+	
+\end{columns}
+\end{block}
 \end{frame}
 
 %----------------------------------------------
@@ -462,14 +483,31 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 				\item 12 GeV for Hall D
 				\item Superconducting RF cavities
 				\item RF separators split the beam to each Hall
-				\item [] \hspace{-15pt}\textbf{MARATHON }
+				\item [] \hspace{-15pt}\textbf{MARATHON's proposal }
 				\item 11 GeV Beam	
-				\item 22.5 $\mu$A current
-				\item Hall A's high resolution spectrometers
+				\item Bigbite spectrometer
+				\item Hall A's high resolution spectrometers (HRS)
+				\item Tritium
 			\end{itemize}
 		\end{block}
 \end{columns}
 \end{frame}
+
+
+\begin{frame}
+\begin{center}
+	\textbf{Uses of Tritium}
+	\begin{tikzpicture}
+	\node (img1) {\includegraphics[height=5cm]{../images/T1.png}};
+	
+	\node (img2) at (img1.south east)[xshift=2.5cm,yshift=3cm] {\includegraphics[height=4cm]{../images/T2.png}};
+	
+	\node (img3) at (img2.south west) [yshift=-1.5cm] {\includegraphics[height=4cm]{../images/T3.png}};
+	\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
 %---------------------------------------------------------------
 \begin{frame}
 \frametitle{Tritium Target Cell}
@@ -497,7 +535,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 %----------------------------------------------
 \begin{frame}
 \centering 
-\textbf{Hardware Experience}
+\textbf{Bigbite Spectrometer}
 \begin{columns}
 	
 	\column{0.5\textwidth}
@@ -506,7 +544,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 	\end{figure}
 	\begin{block}{}
 		\begin{itemize}
-			\item[] Large Acceptance Spectrometer
+			\item[] \noindent Large Acceptance Spectrometer
 			\item Solid angle = 96 mrad
 			\item Large Momentum Acceptance: $>$ 500 MeV/c
 		\end{itemize}
@@ -516,11 +554,12 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 	\column{0.5\textwidth}
 	\begin{block}{Preparing Bigbite}
 		\begin{itemize}
-			\item Refurbishing signal electronics and cables
-			\item Testing then repairing or replacing PMTs
-			\item Building front end electronics and coincidence trigger logic
-			\item Testing High voltage power sources and providing power to the detectors
+			\item Signal quality checks
+			\item PMT performance studies
+			\item Designing trigger logic
+			\item Supply detector HV
 		\end{itemize}
+	After about 2 years of work: Removed from then run plan!
 	\end{block}
 \end{columns}
 \end{frame}
@@ -560,7 +599,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 	\begin{itemize}
 		\item Ran from January 11th to April 12th of 2018.
 		\item Gaseous targets - Tritium, Deuterium, Helium-3, and Hydrogen
-		\item Rotated through targets to achieve equal statics and reduce the impact of unforeseen circumstances
+		\item Rotated through targets to achieve equal statistics and reduce the impact of systematic uncertainties
 	\end{itemize}
 \end{columns}
 \begin{figure}
@@ -690,6 +729,9 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 			\item N = Number of electrons
 			\item BG = Background
 			\item L = Luminosity 
+			\begin{itemize}
+				\item Density Correction
+			\end{itemize}
 			\column{0.45\textwidth}
 			\item $\epsilon$ = Efficiency
 			\item $\Delta E^{\prime} \Delta \Omega$= Bin Size
@@ -712,7 +754,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 	\vspace*{-0.75cm}
 	\begin{itemize}
 		\item $\gamma$ decay into an e$^+$e$^-$ pairs
-		\item  Pair produced $^-$ by detecting e$^+$
+		\item  Pair produced $e^-$ by detecting e$^+$
 		\item Extraction based on fit to Exponential function 
 	\end{itemize}
 	\column{0.45\textwidth}
@@ -971,7 +1013,7 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 \end{block}
 
 \begin{figure}
-	\includegraphics[width =5cm]{../images/puzzels.jpg}
+	\includegraphics[width =5cm]{../images/puzzle2.png}
 \end{figure}
 
 \end{frame}
@@ -999,6 +1041,27 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 
 \end{frame}
 %----------------------------------------------
+\begin{frame}{}
+\begin{block}{Summary}
+	\begin{itemize}
+		\item \small{ The puzzling EMC Effect - decrease in high momentum quarks A$>$2}
+		\item DIS - probe the quarks 
+		\item Used JLabs 12GeV electron beam \& Hall A's HRS
+		\item \small{Use the $^3$He \& $^3$H EMC Effect to add a puzzle piece to the EMC puzzle. }
+	\end{itemize}
+\end{block}
+
+
+\begin{block}{Special Thanks}
+	\begin{itemize}
+		\item Nadia Fomin and Douglas Higinbotham
+		\item The Tritium Students 
+		\item DOE and JSA 
+		\item Rex Tayloe for the invite.
+	\end{itemize}
+\end{block}
+\end{frame}
+
 
 
 \begin{frame}
@@ -1021,27 +1084,6 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 
 \end{frame}
 %----------------------------------------------
-
-\begin{frame}{}
-\begin{block}{Summary}
-	\begin{itemize}
-		\item The puzzling EMC Effect - decrease in high momentum quarks
-		\item DIS - probe the quarks 
-		\item DOE and JSA 
-		\item Rex Tayloe for the invite.
-	\end{itemize}
-\end{block}
-
-
-\begin{block}{Special Thanks}
-	\begin{itemize}
-		\item Nadia Fomin and Douglas Higinbotham
-		\item The Tritium Students 
-		\item DOE and JSA 
-		\item Rex Tayloe for the invite.
-	\end{itemize}
-\end{block}
-\end{frame}
 
 
 \begin{frame}[allowframebreaks]
@@ -1067,7 +1109,7 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 		\bibitem[K. Nakamura et. al. 2010]{Rev_PP} K. Nakamura et. al.
 		\newblock \emph{Review of Particle Physics, 37 (2010) }	
 \vspace*{-8pt}		
-		\bibitem[S.N.Santiestebana et. al (2019)]{denscor} S.N.Santiestebana et. al 
+		\bibitem[S.N.Santiesteban et. al (2019)]{denscor} S.N.Santiestebana et. al 
 		\newblock 	\emph{Nucl. Instrum. Meth.} A 940 (2019) 351-358
 \vspace*{-8pt}				
 		\bibitem[J.Seely, A. Daniel et al, 2009]{E3103} J.Seely, A. Daniel et al  
@@ -1581,3 +1623,32 @@ $\bullet$ \textbf{\textcolor{green}{Quasi-elastic scattering}}\\
 
 \bibitem[Garvey, G. T. et. al. (2015)]{spectrum} Garvey, G. T. et. al.
 \newblock \emph{Phys. Rept., 580 (2015) 1-45 }	
+
+
+
+
+
+
+\begin{frame}
+\frametitle{Why DIS?}
+\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+	\column{.5\textwidth} % Left column and width	
+	\vspace*{-30pt}
+	\begin{figure}[t]
+		\centering
+		\includegraphics[width=5cm]{../images/Thesis/f1_f2_spin.pdf} 
+		\caption*{Ratio of $2x\cdot F_1(x)$ and $F_2(x)$ vs. $x$. \cite{PnN}}
+		
+	\end{figure} 
+	
+	
+	\column{.5\textwidth} % Left column and width
+	\begin{figure}[t]
+		\vspace*{-30pt}
+		\centering
+		\includegraphics[width=5cm]{../images/Thesis/SLAC_F2.png} 
+		\caption*{ Proton structure function $F_2(x, Q^2)$ for different $x$ settings. \cite{Rev_PP}}
+		
+	\end{figure} 
+\end{columns}
+\end{frame}
