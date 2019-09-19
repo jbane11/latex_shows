@@ -16,7 +16,7 @@
 %	PACKAGES AND THEMES
 %----------------------------------------------------------------------------------------
 
-\documentclass[12pt]{beamer}
+\documentclass[12pt,usenames,dvipsnames]{beamer}
 
 \mode<presentation> {
 
@@ -165,10 +165,12 @@ University of Tennessee \\ % Your institution for the title page
 		\includegraphics[width =5cm]{../images/DIS_toon.png}
 	\end{figure}
 	\column{.55\textwidth} % Right column and width
+	\pause
 	\begin{itemize}
 		\item $ Q^2 \equiv 4EE' sin^2 \frac{\theta}{2} $
 		\item $X_{Bj}= \frac{Q^2}{2\nu M}$
 		\item $\nu$ $\equiv$ E-E$^{\prime}$
+		\pause
 		\item  $W^2 = 2M\nu + M^2 - Q^2$
 		\item $W^2 >$ 4 $\rightarrow$ DIS 
 	\end{itemize}
@@ -204,7 +206,7 @@ University of Tennessee \\ % Your institution for the title page
 \end{figure}
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 \column{.34\textwidth} % Left column and width
-$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
+$\bullet$ \textbf{\textcolor{ForestGreen}{Elastic scattering}}\\
 \vspace{-30pt}
 \begin{figure}[]
 \includegraphics[height=3.5cm]{../images/elast_draw.png}
@@ -232,7 +234,7 @@ $\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
 \vspace*{-0.5cm}
 \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 \column{.34\textwidth} % Left column and width
-$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}\\
+$\bullet$ \textbf{\textcolor{ForestGreen}{Elastic scattering}}\\
 \begin{figure}[]
 \includegraphics[width=3.5cm]{../images/elast_draw.png}
 \end{figure}
@@ -261,7 +263,7 @@ $\bullet$ \textbf{\textcolor{red}{Quaiselastic scattering}}\\
 \end{figure}
 \begin{columns}[t]
 \column{.3\textwidth} % Left column and width
-$\bullet$ \textbf{\textcolor{green}{Elastic scattering}}
+$\bullet$ \textbf{\textcolor{ForestGreen}{Elastic scattering}}
 \begin{figure}[]
 \includegraphics[width=3.5cm]{../images/elast_draw.png}
 \end{figure}
@@ -770,6 +772,61 @@ $\bullet$ Extract the corrected EMC effect!
 \end{frame}
 
 
+\begin{frame}
+\begin{block}{Efficiencies ($\epsilon$)}
+	\begin{columns}
+		\column{0.5\textwidth}
+		
+		\begin{itemize}
+			\item Particle Identification(PID) 
+			\begin{itemize}
+				\item Cherenkov
+				\item Calorimeters
+			\end{itemize}
+			\item Trigger
+			\begin{itemize}
+				\item Scintillators \& cherenkov
+				\item $\approx$ 99\%
+			\end{itemize}
+			\item Tracking
+			\begin{itemize}
+				\item Vertical Drift Chambers(VDCs)
+				\item $\approx$ 98\%
+			\end{itemize}
+			\item Electronic Deadtime
+			\begin{itemize}
+				\item $\approx$ 96\%-99\%
+			\end{itemize}
+		\end{itemize}
+		\column{0.4\textwidth}	
+		Calculating efficiencies
+		\begin{itemize}
+			\item Use well defined sampling
+			\item Determine good event samples with cuts
+			\item \# of events to fail the criteria $\rightarrow$ inefficiency 
+		\end{itemize}
+		
+	\end{columns}
+\end{block}
+\end{frame}
+
+\begin{frame}{}
+\frametitle{Particle ID Efficiency}
+\begin{columns}
+\column{0.65\textwidth}
+\begin{figure}[t]%
+	\includegraphics[width=8cm]{../images/Thesis/PID_2d}
+\end{figure}
+\column{0.35\textwidth}
+\begin{itemize}
+	\item Total energy absorber for electrons
+	\item Cherenkov's pion threshold is $>$ momentum setting
+	\item PID efficiency $\approx 98\%$  for all kinematics 
+\end{itemize}
+
+\end{columns}	
+\end{frame}
+
 \subsection[Systematic Studies]{Systematic Studies}
 %------------------------------------------------------------------
 
@@ -860,56 +917,6 @@ $\bullet$ Extract the corrected EMC effect!
 \end{frame}
 
 \begin{frame}
-\begin{block}{Efficiencies ($\epsilon$)}
-	\begin{columns}
-		\column{0.5\textwidth}
-
-		\begin{itemize}
-		\item Particle Identification(PID) 
-		\begin{itemize}
-			\item Cherenkov
-			\item Calorimeters
-		\end{itemize}
-		\item Trigger
-		\begin{itemize}
-			\item Scintillators
-		\end{itemize}
-		\item Tracking
-		\begin{itemize}
-			\item Vertical Drift Chambers(VDCs)
-		\end{itemize}
-		\item Electronic Deadtime
-	\end{itemize}
-	\column{0.4\textwidth}	
-	Calculating efficiencies
-	\begin{itemize}
-		\item Use well defined sampling
-		\item Determine good event samples with cuts
-		\item \# of events to fail the criteria $\rightarrow$ inefficiency 
-	\end{itemize}
-	
-	\end{columns}
-\end{block}
-\end{frame}
-
-\begin{frame}{}
-\frametitle{Particle ID Efficiency}
-\begin{columns}
-		\column{0.65\textwidth}
-	\begin{figure}[t]%
-		\includegraphics[width=8cm]{../images/Thesis/PID_2d}
-	\end{figure}
-	\column{0.35\textwidth}
-	\begin{itemize}
-		\item Total energy absorber for electrons
-		\item Cherenkov's pion threshold is $>$ momentum setting
-		\item PID efficiency $\approx 98\%$  for all kinematics 
-	\end{itemize}
-
-\end{columns}	
-\end{frame}
-
-\begin{frame}
 	\begin{block}{Monte Carlo Ratio Method}
 	\begin{align}
 		Y_{MC}(E^{\prime},\theta) &= L \cdot \sigma^{model} \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) \nonumber\\
@@ -937,9 +944,11 @@ $\bullet$ Extract the corrected EMC effect!
 			\item Use model to weight events
 			\begin{itemize}
 				\item Deep Inelastic and resonance region from Ari Bodek Fit from E139 
+				\item Full Mo and Tsai radiative correction
 			\end{itemize}
 		\end{itemize}
 		\cite{bodek}  
+		[L.W. Mo and Y.S. Tsai, 1969] 
 	\end{block}
 	\column{0.45\textwidth}
 	\vspace{-20pt}
@@ -959,6 +968,7 @@ $\bullet$ Extract the corrected EMC effect!
 \begin{frame}
 \Huge{Result}\\
 \Large{Deep Inelastic Cross Section}\\
+\qquad 10.6 GeV Beam, W$^2$ > 3.5
 \Large{Cross Section Ratios}\\
 \Large{EMC Effect}
 
@@ -1043,7 +1053,8 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 \end{frame}
 %----------------------------------------------
 \begin{frame}{}
-\frametitle{EMC Effect}
+$\bullet$ My EMC results for \textcolor{black}{He3 in black} \textcolor{red}{$\bullet$ H3 in red}\\
+$\bullet$ \textcolor{ForestGreen}{Previous Jlab He3 in green}
 \begin{figure}
 	\includegraphics[width=10cm]{../images/EMCIsotwo.pdf}
 \end{figure}
@@ -1058,6 +1069,8 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 		\item Model Dependence on Isoscalar correction
 		\item Determine the magnitude of the EMC effect for Tritium and Helium-3
 	\end{itemize}
+\centering
+\large{Understanding the effect of neutron/proton excess on the EMC Effect}
 \end{block}
 
 \begin{figure}
@@ -1092,8 +1105,8 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 \begin{frame}{}
 \begin{block}{Summary}
 	\begin{itemize}
-		\item \small{ The puzzling EMC Effect - decrease in high momentum quarks A$>$2}
 		\item DIS - probe the quarks 
+		\item \small{ The puzzling EMC Effect - decrease in high momentum quarks A$>$2}
 		\item Used JLabs 12GeV electron beam \& Hall A's HRS
 		\item \small{Use the $^3$He \& $^3$H EMC Effect to add a puzzle piece to the EMC puzzle. }
 	\end{itemize}
