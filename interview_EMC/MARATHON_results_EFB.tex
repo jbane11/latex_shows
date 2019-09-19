@@ -325,11 +325,16 @@ $\bullet$ \textbf{\textcolor{blue}{DIS}}
 		\caption*{\cite{cc}}
 	\end{figure}
 	\column{.45\textwidth}
-	\centering
-	\textbf{ European Muon Collaboration}
+	
+	\vspace{-1.25cm}	\hspace{-20pt}\textbf{ European Muon Collaboration}
+	
 	\begin{itemize}
 		\item \small$X$ = fraction of momentum carried by quark	
-		\item Expected Unity $\rightarrow$ Binding $<$ interaction
+		\item Expected Unity at low $x$ 
+		\begin{itemize}
+			\item Binding $<$ momentum transfer
+			\item Free Nucleons
+		\end{itemize}
 		\item F$^A$ = $Z \cdot F^p + (A-Z)\cdot F^n$  
 		\item Unexpected Relative Decrease
 		\item Missing high-momentum quarks in A$>$2
@@ -536,38 +541,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{frame}
 
 %----------------------------------------------
-\begin{frame}
-\centering 
-\textbf{Bigbite Spectrometer}
-\begin{columns}
-	
-	\column{0.5\textwidth}
-	\begin{figure}
-		\hspace*{-1.4cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
-	\end{figure}
-	\begin{block}{}
-		\begin{itemize}
-			\item[] \noindent Large Acceptance Spectrometer
-			\item Solid angle = 96 mrad
-			\item Large Momentum Acceptance: $>$ 500 MeV/c
-		\end{itemize}
-	\end{block}
-	
-	\hspace*{0.5cm}
-	\column{0.5\textwidth}
-	\begin{block}{Preparing Bigbite}
-		\begin{itemize}
-			\item Signal quality checks
-			\item PMT performance studies
-			\item Designing trigger logic
-			\item Supply detector HV
-		\end{itemize}
-	After about 2 years of work: Removed from then run plan!
-	\end{block}
-\end{columns}
-\end{frame}
 
-%----------------------------------------------
 \begin{frame}
 \frametitle{Hall A}
 \begin{figure}
@@ -588,6 +562,41 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 
 
 %-----------------------------------------------
+\begin{frame}
+\centering 
+\textbf{Bigbite Spectrometer}
+\begin{columns}
+	
+	\column{0.5\textwidth}
+	\begin{figure}
+		\hspace*{-1.4cm}	\includegraphics[width=7cm]{../images/Thesis/BigBite1.png}
+	\end{figure}
+	\begin{block}{}
+		\begin{itemize}
+			\item[] \noindent Large Acceptance Spectrometer
+			\item Solid angle = 96 mrad
+			\item Large Momentum Acceptance: $>$ 500 MeV/c
+		\end{itemize}
+	\end{block}
+	
+	\hspace*{0.5cm}
+	\column{0.5\textwidth}
+	\begin{block}{My contributions in preparing Bigbite}
+		\begin{itemize}
+			\item Constructing the data acquisition system
+			\item PMT performance studies
+			\item Designing trigger logic
+			\item Ensuring consistent and dependable HV power
+		\end{itemize}
+		Removed from then run plan for safety and logistical concerns
+	\end{block}
+\end{columns}
+\end{frame}
+
+%----------------------------------------------
+
+
+
 \subsection[Run Period]{Run Period}
 \begin{frame}
 \frametitle{The Run Period}
@@ -623,19 +632,33 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 \end{frame}
 %------------------------------------------------------------------
 \section[Analysis]{Data Analysis}
+\begin{frame}
+{\centering\huge{Path to The EMC Effect}}
+%\vspace{10pt} 
+\Large{
+$\bullet$ Calibrate detectors to receive meaningful data\\
+$\bullet$ Determine the yield, efficiency and background\\
+$\bullet$ Calculate the cross sections and ratios\\
+$\bullet$ Extract the corrected EMC effect!
+}
+\end{frame}
+
+
+
 \subsection[Calibration]{Calibration}
 \begin{frame}
 \textbf{Preparing Data for Analysis}
 \begin{columns}[]
-\column{0.45\textwidth}
+\column{0.55\textwidth}
 \begin{block}{Calibration}
 	\begin{itemize}
 		\item[] \textbf{ADC calibration}
-		\item Calorimeters, Scintillators, and Cherenkov
+		\item Calorimeters, Scintillators, and \textbf{Cherenkov}
 		\item[] \textbf{TDC calibration}
 		\item Scintillators and VDC
 		\item[] \textbf{Detector calibrations} 
-		\item BPMs, BCMS, Optics 
+		\item Beam Current Monitors 
+		\item \textbf{Beam Position Monitors}
 	\end{itemize}
 \end{block}
 \column{0.45\textwidth}
@@ -732,6 +755,7 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 			\item N = Number of electrons
 			\item BG = Background
 			\item L = Luminosity 
+		\vspace{-10pt}
 			\begin{itemize}
 				\item Density Correction
 			\end{itemize}
@@ -855,7 +879,15 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 			\item Vertical Drift Chambers(VDCs)
 		\end{itemize}
 		\item Electronic Deadtime
-	\end{itemize}	
+	\end{itemize}
+	\column{0.4\textwidth}	
+	Calculating efficiencies
+	\begin{itemize}
+		\item Use well defined sampling
+		\item Determine good event samples with cuts
+		\item \# of events to fail the criteria $\rightarrow$ inefficiency 
+	\end{itemize}
+	
 	\end{columns}
 \end{block}
 \end{frame}
@@ -869,8 +901,8 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 	\end{figure}
 	\column{0.35\textwidth}
 	\begin{itemize}
-		\item Use well defined samples
-		\item Apply PID cuts and count
+		\item Total energy absorber for electrons
+		\item Cherenkov's pion threshold is $>$ momentum setting
 		\item PID efficiency $\approx 98\%$  for all kinematics 
 	\end{itemize}
 
@@ -924,12 +956,21 @@ The Continuous Electron Beam Accelerator Facility (CEBAF) at Thomas Jefferson Ac
 
 
 \subsection[Results]{Results}
+\begin{frame}
+\Huge{Result}\\
+\Large{Deep Inelastic Cross Section}\\
+\Large{Cross Section Ratios}\\
+\Large{EMC Effect}
+
+
+\end{frame}
 
 \begin{frame}{}
 \frametitle{DIS Cross Section}
 \centering
+\vspace{-20pt}
 \begin{figure}
-	\includegraphics[width=8cm]{../images/total_xs.pdf}
+	\includegraphics[width=9cm]{../images/total_xs.pdf}
 \end{figure}
 
 Normalization uncertainty due to target thickness uncertainty\\
@@ -1110,8 +1151,8 @@ Cor. = \frac{\Big(0.5*(1.0 + \frac{F_2^n}{F_2^p})\Big)}{ \Big(\frac{1}{A} \cdot 
 		\bibitem[J. Gomez et al., 1994]{slac_emc} J. Gomez et al.   
 		\newblock \emph{Phys. Rev D}  49 (1994) 4348 
 \vspace*{-8pt}
-		\bibitem[D. Higinbotham, 2013]{cc} Douglas Higinbotham (2013) 
-		\newblock The EMC effect still puzzles after 30 years. \emph{Cern Courier} April 2013.
+		\bibitem[Aubert, J.J. et al. 1981]{cc} Aubert, J.J. et al.
+		\newblock \emph{Phys.Lett. 105B (1981) 315-321 CERN-EP/81-84}
 \vspace*{-8pt}		
 		\bibitem[K. Nakamura et. al. 2010]{Rev_PP} K. Nakamura et. al.
 		\newblock \emph{Review of Particle Physics, 37 (2010) }	
