@@ -533,11 +533,11 @@ $\bullet$ \textbf{\textcolor{blue}{DIS}}
 
 
 \begin{frame}{The EMC Effect}
-\begin{columns}
+\begin{columns}[t]
 	\column{.5\textwidth} % Left column and width
 	\vspace{-20pt}
 	\begin{figure}
-		\vspace{10pt}
+		\vspace{-25pt}
 		\includegraphics[width =6cm]{../images/puzzels.jpg}
 	\end{figure}
 	\column{.55\textwidth} % Left column and width
@@ -547,10 +547,11 @@ $\bullet$ \textbf{\textcolor{blue}{DIS}}
 		\item 3+ decades of study
 		\item \leavevmode\Ccancel[red]{Every Model is Cool(EMC)} 
 		\item Dependence on A
-		\item Driven by local density 
-		
+		\item Driven by local density
 	\end{itemize}
 \end{columns}
+\centering The EMC results show a modification to nuclear structure. \\
+\centering Are we treating it correctly?
 \end{frame}
 
 
@@ -915,17 +916,17 @@ $\bullet$ Extract the corrected EMC effect!
 
 \begin{frame}
 \begin{block}{Efficiencies ($\epsilon$)}
-	\begin{columns}
+	\begin{columns}[t]
 		
 				\column{0.45\textwidth}	
 		\onslide<1->	Calculating efficiencies
 		\begin{itemize}
 			\onslide<2->\item Use well defined samples from separate system(s)
 			
-						\only<3>{
-				\item Testing cherenkov $\rightarrow$ calorimeters
-				\item Testing VDC use scintillators. }
-			
+						\onslide<3->{
+				\begin{itemize}
+				\item Testing cherenkov use calorimeters
+				\item Testing VDC use scintillators. 				\end{itemize}						}
 			\onslide<4->\item Determine good event samples with cuts
 			\onslide<5->\item \# of events which fail the criteria $\rightarrow$ inefficiency 
 		\end{itemize}
@@ -1070,16 +1071,22 @@ $\bullet$ Extract the corrected EMC effect!
 
 \begin{frame}
 	\begin{block}{Monte Carlo Ratio Method}
-	\begin{align}
-		Y_{MC}(E^{\prime},\theta) &= L \cdot \sigma^{model} \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) \nonumber\\
-		\sigma_{data} &= \frac{Y_{data}(E^{\prime},\theta)}{ L \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) }\nonumber
-	\end{align}
-	Use a Monte Carlo simulation  \\
-	$\bullet$ $(\Delta E^{\prime} \Delta \Omega)_{Data}$ =$(\Delta E^{\prime} \Delta \Omega)_{MC}$\\
-	$\bullet$ $A(E^{\prime},\theta)_{Data} = A(E^{\prime},\theta)_{MC}$
+	\begin{equation}
+		\sigma_{Data} = \frac{Y_{data}(E^{\prime},\theta)}{ L \cdot (\Delta E^{\prime} \Delta 
+		\Omega) \cdot A(E^{\prime},\theta) }\nonumber
+	\end{equation}
+		\onslide<2->{
+			\begin{equation}
+				Y_{MC}(E^{\prime},\theta) = L \cdot \sigma^{model} \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) \nonumber
+			\end{equation}
+		}
+	\onslide<3->{Use a Monte Carlo simulation  \\}
+	\onslide<4->{$\bullet$ $(\Delta E^{\prime} \Delta \Omega)_{Data}$ =$(\Delta E^{\prime} \Delta \Omega)_{MC}$\\ }
+	\onslide<4->{$\bullet$ $A(E^{\prime},\theta)_{Data} = A(E^{\prime},\theta)_{MC}$}
+	\onslide<5->{
 	\begin{equation}
 		\sigma_{Data} = \sigma_{model} \cdot \frac{Y_{Data}}{Y_{MC}}\nonumber
-	\end{equation} 
+	\end{equation}} 
 	\end{block}
 \end{frame}
 
@@ -1091,7 +1098,7 @@ $\bullet$ Extract the corrected EMC effect!
 	\column{0.5\textwidth}
 	\begin{block}{Monte Carlo}
 		\begin{itemize}
-			\item Generate events $\rightarrow$ Pass through Magnetic apertures
+			\item Generate events $\rightarrow$ Pass through magnetic apertures
 			\item Tune Simulation offsets to match detector response
 			\item Use model to weight events
 			\begin{itemize}
@@ -1120,9 +1127,12 @@ $\bullet$ Extract the corrected EMC effect!
 \begin{frame}
 \Huge{Result}\\
 \Large{Deep Inelastic Cross Section}\\
-\qquad 10.6 GeV Beam, W$^2$ $>$ 3.5 \\
+\qquad 10.6 GeV Beam, W$^2$ $>$ 3.5 Gev$^2$\\
+\qquad Scatted angles 17.5$^\circ$ to 31$^\circ$\\
 \Large{Cross Section Ratios}\\
 \Large{EMC Effect}
+\Large{First DIS cross section and EMC measurement of $^3H$}
+\Large{First direct comparison of two A=3 EMC effects.}
 
 
 \end{frame}
@@ -1226,8 +1236,8 @@ $\bullet$ \textcolor{ForestGreen}{Previous Jlab He3 in green}
 \begin{frame}{}
 \begin{block}{Summary}
 	\begin{itemize}
-		\item Used DIS to extract inclusive cross section for $^3$H, $^3$H3, and D
-		\item Looked at the A/D ratio for both $^3$H and $^3$H3
+		\item Used DIS to extract inclusive cross section for $^3$H, $^3$He, and D
+		\item Looked at the A/D ratio for both $^3$H and $^3$He
 		\item Applied model dependent correction for excess protons and neutrons.
 		\item Compared the EMC effects of the two, A=3 nuclei. 
 		\begin{itemize}
