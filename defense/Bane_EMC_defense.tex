@@ -130,7 +130,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 %\logo{\includegraphics[width=0.05\textwidth]{../images/utlogo}}
-\title[EMC A=3]{The EMC Effect for Tritium and Helium-3 from JLab's MARATHON Experiment using DIS.} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[EMC A=3]{The EMC Effect in A=3 Nuclei.} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Jason Bane} % Your name
 \institute[UTK] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -152,11 +152,14 @@ University of Tennessee \\ % Your institution for the title page
 \begin{tikzpicture}[remember picture,overlay]
 \node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.8cm]{../images/utlogo}};
 \end{tikzpicture}}
-\begin{frame}
-\begin{figure}
-	\includegraphics[width=12cm]{../images/Jlab1.png}
-\end{figure}
-\end{frame}
+
+%\begin{frame}
+%\begin{figure}
+%	\includegraphics[width=12cm]{../images/Jlab1.png}
+%\end{figure}
+%\end{frame}
+
+
 \begin{frame}{Outline}
 \large{
 \begin{enumerate}
@@ -267,7 +270,7 @@ University of Tennessee \\ % Your institution for the title page
 \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
 \column{.5\textwidth} % Left column and width	
 	\textbf{Quark parton model}\\
-	In the Broken limit
+	In the Bjorken limit where ($Q^2/\nu$) is fixed
 \begin{itemize}
 	\item $F_2(x) = x \cdot$ $\sum_{i}$ $z_i^2f_i(x) $
 	\item $F_1(x) = 1/2 \cdot$ $\sum_{i}$ $z_i^2f_i(x)$
@@ -302,10 +305,8 @@ University of Tennessee \\ % Your institution for the title page
 	\column{.45\textwidth}
 	
 	\vspace{-1.25cm}	\hspace{-20pt}\textbf{ European Muon Collaboration}
-	
+	\pause
 	\begin{itemize}
-		\item \small$X$ = fraction of momentum carried by quark	
-				\pause
 		\item Expected Unity at low $x$ 
 				\pause
 		\begin{itemize}
@@ -347,15 +348,15 @@ University of Tennessee \\ % Your institution for the title page
 \end{figure}
 \column{.50\textwidth} % Left column and width
 
-{\hspace*{50pt}
 	\begin{itemize}
 		\item<1-> JLab experiment E03103 \cite{E3103} 
 		\item<2-> CERN, SLAC, HERMES, BCDMS, and JLab
-		\item<3-> Quantized by slope of A/D ratios from 0.3 - 0.7 in x
-		\item<4-> Models have difficulty matching data for all criteria
-		\item<5-> $\approx$ log dependence in A
+		\item<3-> Corrections for non-isoscalar nuclei
+		\item<4-> Quantized by slope of A/D ratios from 0.3 - 0.7 in x
+		\item<5-> Models have difficulty matching data for all criteria
+		\item<6-> $\approx$ log dependence in A
 	\end{itemize}
-}
+
 \end{columns}
 \end{frame}
 
@@ -459,13 +460,14 @@ University of Tennessee \\ % Your institution for the title page
 	\begin{itemize}
 		\item[]\textbf{The EMC puzzle}
 		\item 3+ decades of study
+		\item Dependent on a model based correction
 		\item \leavevmode\Ccancel[red]{Every Model is Cool(EMC)} 
 		\item Dependence on A
 		\item Driven by local density
 	\end{itemize}
 \end{columns}
-\centering The EMC results show a modification to nuclear structure. \\
-\centering Are we treating it correctly?
+%\centering The EMC results show a difference in nuclear structure. \\
+%\centering Are we treating it correctly?
 \end{frame}
 
 
@@ -512,6 +514,11 @@ MeAsurement of $F^n_2/F^p_2, d/u$ RAtios and $A=3$ EMC Effect in Deep Inelastic 
 	
 	
 \end{columns}
+\begin{itemize}
+	\item Can help determine the validity of the isoscalar correction procedure.
+	\item Are we using the correct method of correcting the non-isoscalar nuclei?
+\end{itemize}
+
 \end{block}
 \end{frame}
 \begin{frame}
@@ -812,13 +819,13 @@ $\bullet$ Extract the corrected EMC effect!
 
 	%	\begin{columns}[c]
 	%		\column{0.25\textwidth}
-		\only<1,2,3,4,5,6>{
+		\only<1,2,3,4>{
 				\vspace*{-.95cm}
 				\begin{figure}
 					\includegraphics[width=3.cm]{../images/ballsinbucket.png}
 				\end{figure}}
 	%		\column{0.55\textwidth}
-			\only<7->{
+			\only<5->{
 			%	\vspace{0.75cm}
 				\begin{equation}
 					\dfrac{d\sigma}{dE^{\prime}d\Omega} = \frac{(N - BG)}{L \cdot \epsilon \cdot \Delta E^{\prime} \Delta \Omega \cdot A(E^{\prime},\theta)} \nonumber
@@ -831,16 +838,16 @@ $\bullet$ Extract the corrected EMC effect!
 			\begin{columns}[t]
 				\column{0.45\textwidth}
 					\onslide<2->{\item N = Number of electrons}
-					\onslide<5->{\vfill \item BG = Background}
+					\onslide<3->{\vfill \item BG = Background}
 					\onslide<2->{\vfill \item L = Luminosity }
 					\vspace{-10pt}
 					\begin{itemize}
 						\onslide<3->{\item Density Correction }
 					\end{itemize}
 				\column{0.45\textwidth}
-					\onslide<4->{\item $\epsilon$ = Efficiency }
-					\onslide<6->{\item $\Delta E^{\prime} \Delta \Omega$= Bin Size }
-					\onslide<6->{\item $A(E^{\prime},\theta)$ = Acceptance probability }
+					\onslide<3->{\item $\epsilon$ = Efficiency }
+					\onslide<4->{\item $\Delta E^{\prime} \Delta \Omega$= Bin Size }
+					\onslide<4->{\item $A(E^{\prime},\theta)$ = Acceptance probability }
 			\end{columns}
 		\end{itemize}
 
@@ -856,12 +863,12 @@ $\bullet$ Extract the corrected EMC effect!
 		\begin{itemize}
 			\onslide<2->\item Use well defined samples from separate system(s)
 			
-						\onslide<3->{
+						\onslide<2->{
 				\begin{itemize}
 				\item Testing cherenkov use calorimeters
 				\item Testing VDC use scintillators. 				\end{itemize}						}
-			\onslide<4->\item Determine good event samples with cuts
-			\onslide<5->\item \# of events which fail the criteria $\rightarrow$ inefficiency 
+			\onslide<3->\item Determine good event samples with cuts
+			\onslide<4->\item \# of events which fail the criteria $\rightarrow$ inefficiency 
 		\end{itemize}
 		
 		
@@ -870,22 +877,22 @@ $\bullet$ Extract the corrected EMC effect!
 		\begin{itemize}
 
 			
-		\onslide<6->{	\item Particle Identification(PID) 
+		\onslide<5->{	\item Particle Identification(PID) 
 			\begin{itemize}
 				\item Cherenkov
 				\item Calorimeters
 			\end{itemize}}
-		\onslide<7->{	\item Trigger
+		\onslide<6->{	\item Trigger
 			\begin{itemize}
 				\item Scintillators \& cherenkov
 				\item $\approx$ 99\%
 			\end{itemize}}
-		\onslide<8->{	\item Tracking
+		\onslide<7->{	\item Tracking
 			\begin{itemize}
 				\item Vertical Drift Chambers(VDCs)
 				\item $\approx$ 98\%
 			\end{itemize}}
-		\onslide<9->{	\item Electronic Deadtime
+		\onslide<8->{	\item Electronic Deadtime
 			\begin{itemize}
 				\item $\approx$ 96\%-99\%
 			\end{itemize}}
@@ -1013,10 +1020,10 @@ $\bullet$ Extract the corrected EMC effect!
 				Y_{MC}(E^{\prime},\theta) = L \cdot \sigma^{model} \cdot (\Delta E^{\prime} \Delta \Omega) \cdot A(E^{\prime},\theta) \nonumber
 			\end{equation}
 		}
-	\onslide<3->{Use a Monte Carlo simulation  \\}
-	\onslide<4->{$\bullet$ $(\Delta E^{\prime} \Delta \Omega)_{Data}$ =$(\Delta E^{\prime} \Delta \Omega)_{MC}$\\ }
-	\onslide<4->{$\bullet$ $A(E^{\prime},\theta)_{Data} = A(E^{\prime},\theta)_{MC}$}
-	\onslide<5->{
+	\onslide<3->{Monte Carlo simulation : \\}
+	\onslide<3->{$\bullet$ $(\Delta E^{\prime} \Delta \Omega)_{Data}$ =$(\Delta E^{\prime} \Delta \Omega)_{MC}$\\ }
+	\onslide<3->{$\bullet$ $A(E^{\prime},\theta)_{Data} = A(E^{\prime},\theta)_{MC}$}
+	\onslide<4->{
 	\begin{equation}
 		\sigma_{Data} = \sigma_{model} \cdot \frac{Y_{Data}}{Y_{MC}}\nonumber
 	\end{equation}} 
@@ -1160,7 +1167,7 @@ $\bullet$ \textcolor{ForestGreen}{Previous Jlab He3 in green}
 \vspace{-20pt}
 \begin{figure}
 	\includegraphics[width=12cm]{../images/Thesis/A_ratios.pdf}
-	\caption*{Ratio of EMC effects. Black is Isoscalar correct, red is not. }
+	\caption*{Ratio of EMC effects.}
 \end{figure}
 \end{frame}
 
@@ -1171,7 +1178,6 @@ $\bullet$ \textcolor{ForestGreen}{Previous Jlab He3 in green}
 	\begin{itemize}
 		\item Used DIS to extract inclusive cross section for $^3$H, $^3$He, and D
 		\item Looked at the A/D ratio for both $^3$H and $^3$He
-		\item Applied model dependent correction for excess protons and neutrons.
 		\item Compared the EMC effects of the two, A=3 nuclei. 
 		\begin{itemize}
 			\item See no difference for Isoscalar EMC effects within analysis accuracy
